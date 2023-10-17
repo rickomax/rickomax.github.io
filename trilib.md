@@ -24,5 +24,4 @@ TriLib is a cross-platform runtime 3D model importer for Unity
 - A complete PBR model viewer included
 - Built-in file browser
 
-For more information, please refer to:<br>
-[TriLib website](https://ricardoreis.net/trilib-2/)
+For more information, please refer to [TriLib website](https://ricardoreis.net/trilib-2/)
