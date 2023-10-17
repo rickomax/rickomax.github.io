@@ -14,7 +14,7 @@ Join us on Discord:<br>
 [Discord server](https://discord.gg/WpMFRk3qT7)
 
 The last demo version can be found here (**Windows only**):<br>
-[Download Link](https://drive.google.com/file/d/1rVMuwemFJBgl18sh0To-Az6Jq1KQPNYA/view?usp=sharing)
+[Download link](https://drive.google.com/file/d/1rVMuwemFJBgl18sh0To-Az6Jq1KQPNYA/view?usp=sharing)
 
 Features:<br>
 - Improved resolution (Up to 4k support)
