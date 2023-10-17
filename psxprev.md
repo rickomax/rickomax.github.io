@@ -4,9 +4,10 @@ title: PSXPrev
 title_nav: PSXPrev
 permalink: /psxprev/
 ---
+PSXPREV - PlayStation (PSX) Files Previewer/Extractor
 
-[Discord server]()
+[Discord server](https://discord.gg/kVNc44Pf)
 
-[GitHub repository]()
+[GitHub repository](https://github.com/rickomax/psxprev)
 
 ![](/assets/img/psxprev-preview.png)
