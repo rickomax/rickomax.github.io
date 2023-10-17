@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Index
-title_nav: Index
+title: Welcome
+title_nav: Home
 permalink: /
 ---
 Here you can find a few projects I've been working on
