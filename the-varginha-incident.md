@@ -27,7 +27,7 @@ Features:<br>
 Running instructions:<br>
 Extract the Zip contents to any folder, then execute the "**ACKNEX.exe**" file.
 
-Please note that this demo is limited.<br> Original animations and music are not included.
+Please note that this demo is limited. Original animations and music are not included.
 
 - **WASD keys**: Slow movement
 - **WASD keys + shift**: Fast movement
