@@ -40,7 +40,7 @@ Please note that this demo is limited.<br> Original animations and music are not
 - **2,3,4,5,6**: Change weapons
 - **ESC**: Options menu
 
-*The Variginha Incident Copyright © 1998 Perceptum Informática Ltda. All rights reserved.<br>
-"Perceptum" and "Incident em Varginha" are trademarks owned by Perceptum Informática Ltda.*
+*The Variginha Incident (Incidente em Varginha) Copyright © 1998 Perceptum Informática Ltda. All rights reserved.<br>
+"Perceptum" and "Incidente em Varginha" are trademarks owned by Perceptum Informática Ltda.*
 
 *ACKNEX REMASTERED developed by Ricardo Reis.*
