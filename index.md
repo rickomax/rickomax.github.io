@@ -10,7 +10,7 @@ projects:
   -
     title: The Varginha Incident
     url: /varginha-incident/
-    image: /assets/img/varginha-incident.png
+    image: /assets/img/varginha-incident-preview.png
     description: Hello world
   -
     title: PSXPrev
@@ -23,12 +23,12 @@ You can either add links to landing pages for individual programs/games here, or
 ***
 
 ### [The Varginha Incident](/varginha-incident/)
-Hello world
+The Varginha Incident (Alien Anarchy) game port made in Unity 3D
 
 ***
 
 ### [PSXPrev](/psxprev/)
-Hello world
+PlayStation (PSX) Files Previewer/Extractor
 
 ***
 
