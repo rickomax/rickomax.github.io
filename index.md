@@ -1,13 +1,3 @@
-
----
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
-layout: page
-title: Welcome
-title_nav: Home
-permalink: /
----
 Here you can find a few projects I've been working on
 
 ***
