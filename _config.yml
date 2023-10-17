@@ -1,29 +1,70 @@
-# Permalinks
+# Welcome to Jekyll!
 #
-# Use of `relative_permalinks` ensures post links from the index work properly.
-permalink:           pretty
-
-# Setup
-title:               ACKNEX Remastered
-tagline:             3D Game Studio 3x Unity Port
-url:                 http://rickomax.github.io
-paginate:            1
-baseurl:             "/"
-
-# Assets
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
 #
-# We specify the directory for Jekyll so we can use @imports.
-sass:
-  sass_dir:          _sass
-  style:            :compressed
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+#
+# If you need help with YAML syntax, here are some quick references for you: 
+# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+# https://learnxinyminutes.com/docs/yaml/
+#
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
 
-# About/contact
-author:
-  name:              Ricardo Reis
-  url:               https://twitter.com/realrickomax
-  email:             contato@ricardoreis.net
+title: Ricardo Reis Projects
+author: Ricardo Reis
+email: contato@ricardoreis.net
+description: >- # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+youtube_channel_name: rickomax1
+youtube_username: rickomax1
+youtube_channel: rickomax1
+twitter_username: real_rickomax
+github_username:  rickomax
 
-# Custom vars
-version:             2.0.0
-github:
-  repo:              https://github.com/rickomax/rickomax.github.io
+# Navbars
+header_pages:
+- index.md
+- varginha-incident.md
+- psxprev.md
+- blog.md
+- about.md
+
+# Blog URL configuration
+collections:
+  posts:
+    output: true
+    permalink: /blog/:year/:month/:day/:title/
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+#  - jekyll-redirect-from
+
+# Run settings
+host: 0.0.0.0 # Allow access from other devices on the LAN for testing
+              # Unfortunately this breaks redirects among other things! >:(
+
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+exclude:
+  - Gemfile
+  - Gemfile.lock
