@@ -16,6 +16,14 @@ Join us on Discord:<br>
 The last demo version can be found here (**Windows only**):<br>
 [Download Link](https://drive.google.com/file/d/1rVMuwemFJBgl18sh0To-Az6Jq1KQPNYA/view?usp=sharing)
 
+Features:<br>
+- Improved resolution (Up to 4k support)
+- Improved framerate
+- Native Windows binaries
+- Improved mouse-look
+- Improved controls
+- Mods support
+
 Running instructions:<br>
 Extract the Zip contents to any folder, then execute the "**ACKNEX.exe**" file.
 
