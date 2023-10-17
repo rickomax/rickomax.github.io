@@ -10,6 +10,7 @@ This project is a reimplementation of the 3D Game Studio 3 (a.k.a ACKNEX 3) runt
 The project demo comes with "The Varginha Incident (Alien Anarchy)" Brazilian demo files, previously authorized by the original game developers.
 The goal is to implement more 3D Game Studio 3 games support into the project.
 
+Join us on Discord:<br>
 [Discord server](https://discord.gg/WpMFRk3qT7)
 
 The last demo version can be found here (**Windows only**):<br>
