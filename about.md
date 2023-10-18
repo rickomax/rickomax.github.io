@@ -7,7 +7,8 @@ permalink: /about/
 
 Hi!
 
-My name is Ricardo Reis. I'm a software/games developer born in São Paulo, Brasil.<br>
+My name is Ricardo Reis.<br>
+I'm a software/games developer born in São Paulo, Brasil.<br>
 
 My fields of interest are:
 - Old gaming/hardware
