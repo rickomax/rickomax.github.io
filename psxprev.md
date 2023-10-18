@@ -4,8 +4,6 @@ title: PSXPREV
 title_nav: PSXPREV
 permalink: /psxprev/
 ---
-PSXPREV - PlayStation (PSX) Files Previewer/Extractor
-
 ![PSXPREV](/assets/img/psxprev-preview.png)
 
 PSXPREV is an open-source application suitable to view/extract various file formats used in Playstation (PSX) games.
