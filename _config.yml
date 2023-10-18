@@ -23,6 +23,7 @@ author: Ricardo Reis
 email: contato@ricardoreis.net
 description: >- # this means to ignore newlines until "baseurl:"
   Hi! Here, you can find a few projects I've been working on.
+  [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/X8X3MRF5W)
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 youtube_channel_name: rickomax1
