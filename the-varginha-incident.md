@@ -25,8 +25,10 @@ Features:<br>
 - Mods support
 
 Running instructions:<br>
-Extract the Zip contents to any folder, then execute the "**ACKNEX.exe**" file.
-
+- Extract the Zip contents to any folder, then execute the "**ACKNEX.exe**" file.
+- You can change various game options on the initial menu.
+- When you are ready, click "[PLAY]" on the status bar.
+  
 Please note that this demo is limited. Original animations and music are not included.
 
 - **WASD keys**: Slow movement
