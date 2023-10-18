@@ -29,7 +29,7 @@ PSXPlayground is an attempt to build an LUA scriptable engine that runs on deskt
 Mesh-slicing test made for Garry's Mod (GMOD).<br>
 [https://github.com/rickomax/slicegmod](https://github.com/rickomax/slicegmod)<br><br>
 
-**GISTS**
+**GISTs**
 
-My collection of GitHub GISTS:<br>
-[https://gist.github.com/rickomax](https://gist.github.com/rickomax)<br>
+My collection of GitHub GISTs:<br>
+[https://gist.github.com/rickomax](https://gist.github.com/rickomax)
