@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Misc. Projects
-title_nav: Misc. Projects
+title_nav: Other
 permalink: /misc-projects/
 ---
 **Global Outline**
