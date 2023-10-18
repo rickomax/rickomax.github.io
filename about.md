@@ -7,6 +7,8 @@ permalink: /about/
 
 Hi!
 
+![me](/assets/img/me.jpg ":V")
+
 My name is Ricardo Reis.<br>
 I'm a software/games developer born in São Paulo, Brasil.<br>
 
