@@ -5,7 +5,7 @@ title_nav: About
 permalink: /about/
 ---
 
-<img align="right" width="260" height="260" src="/assets/img/me.jpg">
+<img align="right" width="260" height="260" src="/assets/img/rick.jpg">
 Hi!
 
 My name is Ricardo Reis.<br>
