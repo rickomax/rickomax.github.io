@@ -1,7 +1,7 @@
 ---
 layout: page
-title: PSXPrev
-title_nav: PSXPrev
+title: PSXPREV
+title_nav: PSXPREV
 permalink: /psxprev/
 ---
 PSXPREV - PlayStation (PSX) Files Previewer/Extractor
