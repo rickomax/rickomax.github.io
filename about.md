@@ -6,9 +6,10 @@ permalink: /about/
 ---
 
 <img align="right" width="260" height="260" src="/assets/img/rick.jpg">
-Hi!
+Hi!<br>
 
 My name is Ricardo Reis.<br>
+
 I'm a software/games developer born in São Paulo, Brasil.<br>
 
 My fields of interest are:
