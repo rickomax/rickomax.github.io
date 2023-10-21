@@ -9,10 +9,10 @@ Here you can find a few projects I've been working on
 ### [The Varginha Incident](/the-varginha-incident/)
 The Varginha Incident (Alien Anarchy) game port made in Unity 3D
 
-![The Varginha Incident](/assets/img/varginhaincident-preview.png)
+[![The Varginha Incident](/assets/img/varginhaincident-preview.png)](/the-varginha-incident/)
 
 
 ### [PSXPREV](/psxprev/)
 PlayStation (PSX) Files Previewer/Extractor
 
-![PSXPREV](/assets/img/psxprev-preview.png)
+[![PSXPREV](/assets/img/psxprev-preview.png)](/psxprev/)
