@@ -32,5 +32,5 @@ PSXPREV can export:
 - Animations in glTF2 format.
 
 Special thanks to all PSXPREV contributors, including:
-- Robert Jordan [https://trigger-segfault.github.io/](https://trigger-segfault.github.io/)
+- Robert Jordan [https://github.com/trigger-segfault](https://github.com/trigger-segfault)
 - Cavan Ashton [https://www.reddit.com/user/R7CrazyCanucks/](https://www.reddit.com/user/R7CrazyCanucks/)
