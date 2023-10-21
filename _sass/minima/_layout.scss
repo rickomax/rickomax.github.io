@@ -27,7 +27,9 @@
 .site-nav {
   float: right;
   line-height: $base-line-height * $base-font-size * 2.25;
-
+  // Show navigation drop-down in front of YouTube embeds
+  z-index: 2;
+  
   .nav-trigger {
       display: none;
   }
