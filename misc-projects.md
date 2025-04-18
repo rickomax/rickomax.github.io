@@ -5,8 +5,9 @@ title_nav: Other
 permalink: /misc-projects/
 ---
 **TriSerializer**
-TriSerializer is an evolving Unity serialization framework for serializing and deserializing Unity objects into binary files.
-[https://github.com/rickomax/TriSerializer](https://github.com/rickomax/TriSerializer)
+
+TriSerializer is an evolving Unity serialization framework for serializing and deserializing Unity objects into binary files.<br>
+[https://github.com/rickomax/TriSerializer](https://github.com/rickomax/TriSerializer)<br><br>
 
 **Global Outline**
 
