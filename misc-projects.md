@@ -4,6 +4,10 @@ title: Miscellaneous Projects
 title_nav: Other
 permalink: /misc-projects/
 ---
+**TriSerializer**
+TriSerializer is an evolving Unity serialization framework for serializing and deserializing Unity objects into binary files.
+[https://github.com/rickomax/TriSerializer](https://github.com/rickomax/TriSerializer)
+
 **Global Outline**
 
 Global Outline - Unity (3D/UI/Sprites) full-screen masked outline shader.<br>
