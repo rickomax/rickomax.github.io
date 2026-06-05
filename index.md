@@ -6,10 +6,10 @@ permalink: /
 ---
 Here you can find a few projects I've been working on
 
-### [The Varginha Incident](/the-varginha-incident/)
-The Varginha Incident (Alien Anarchy) game port made in Unity 3D
+### [ACKNEX Remastered](/the-varginha-incident/)
+A community project bringing classic 3D GameStudio A3 games to modern systems via a Unity-based source port. Dev chat, builds, and game compatibility.
 
-[![The Varginha Incident](/assets/img/varginhaincident-preview.png)](/the-varginha-incident/)
+[![ACKNEX Remastered](/assets/img/varginhaincident-preview.png)](/the-varginha-incident/)
 
 
 ### [PSXPREV](/psxprev/)
