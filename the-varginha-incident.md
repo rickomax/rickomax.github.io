@@ -1,3 +1,4 @@
+
 ---
 layout: page
 title: ACKNEX Remastered
@@ -9,7 +10,7 @@ permalink: /the-varginha-incident/
 A community project bringing classic 3D GameStudio A3 games to modern systems via a Unity-based source port. Dev chat, builds, and game compatibility.<br>
 
 Join us on Discord:<br>
-[Discord server](https://discord.gg/WpMFRk3qT7](https://discord.gg/kK8tWjQr)
+[Discord server](https://discord.gg/kK8tWjQr)
 
 Features:<br>
 - Improved resolution (Up to 4k support)
