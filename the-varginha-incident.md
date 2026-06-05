@@ -5,7 +5,6 @@ title: ACKNEX Remastered
 title_nav: ACKNEX Remastered
 permalink: /the-varginha-incident/
 ---
-{% include youtube.html id="0PCSbOksCIY"%}
 
 A community project bringing classic 3D GameStudio A3 games to modern systems via a Unity-based source port. Dev chat, builds, and game compatibility.<br>
 
