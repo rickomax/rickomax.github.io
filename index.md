@@ -1,10 +1,10 @@
-
 ---
 layout: page
 title: Welcome
 title_nav: Home
 permalink: /
 ---
+
 Here you can find a few projects I've been working on
 
 ### [ACKNEX Remastered](/the-varginha-incident/)
