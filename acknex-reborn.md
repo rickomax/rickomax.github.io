@@ -227,7 +227,7 @@ without it.
 | Ambient occlusion | `-SSAO` | *OpenGL.* Darkens corners and creases for extra depth. Costs GPU time. Radius and Strength set how far and how dark. | Off |
 | Smooth distant textures | `-MIPMAPS` | *OpenGL.* Smooths distant textures and stops shimmering. Uses more memory. | On |
 | Smooth fog | `-SMOOTHFOG` | *OpenGL.* Distant surfaces fade into darkness smoothly instead of in bands. | On |
-| Show FPS | `-FPS` | Shows the frame rate in the corner of the view. | On |
+| Show FPS | `-FPS` | Shows the frame rate in the corner of the view. | Off |
 
 **Input**
 
