@@ -477,8 +477,6 @@ Third-party software:
 - Superluminal PerformanceAPI - BSD License
 - FluidR3_GM SoundFont, by Frank Wen and Toby Smithe - MIT License
 
-The full license texts are in LICENSES.txt, next to the program.
-
 Website: [https://rickomax.github.io/acknex-reborn](https://rickomax.github.io/acknex-reborn)<br>
 Discord: [{{ page.discord }}]({{ page.discord }})<br>
 oP group: [https://www.opgroup.de](https://www.opgroup.de)<br>
