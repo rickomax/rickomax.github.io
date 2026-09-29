@@ -474,7 +474,6 @@ Third-party software:
 - TinySoundFont - MIT License
 - Dear ImGui - MIT License
 - libui-ng - MIT License
-- Superluminal PerformanceAPI - BSD License
 - FluidR3_GM SoundFont, by Frank Wen and Toby Smithe - MIT License
 
 Website: [https://rickomax.github.io/acknex-reborn](https://rickomax.github.io/acknex-reborn)<br>
