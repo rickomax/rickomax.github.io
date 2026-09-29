@@ -467,14 +467,21 @@ ACKNEX Reborn community.
 
 Third-party software:
 
-SDL 3 and SDL_mixer (zlib License); Dear ImGui, libui-ng, TinySoundFont and
-stb_vorbis (MIT License); TiMidity (Artistic License); Superluminal
-PerformanceAPI (BSD License); the FluidR3_GM SoundFont by Frank Wen and Toby
-Smithe (MIT License). The full license texts are in LICENSES.txt, next to the
-program.
+- SDL 3 - zlib License
+- SDL_mixer - zlib License
+- TiMidity - Artistic License
+- stb_vorbis - MIT License
+- TinySoundFont - MIT License
+- Dear ImGui - MIT License
+- libui-ng - MIT License
+- Superluminal PerformanceAPI - BSD License
+- FluidR3_GM SoundFont, by Frank Wen and Toby Smithe - MIT License
+
+The full license texts are in LICENSES.txt, next to the program.
 
 Website: [https://rickomax.github.io/acknex-reborn](https://rickomax.github.io/acknex-reborn)<br>
 Discord: [{{ page.discord }}]({{ page.discord }})<br>
-oP group: [https://www.opgroup.de](https://www.opgroup.de)
+oP group: [https://www.opgroup.de](https://www.opgroup.de)<br>
+Support the project: [https://ko-fi.com/{{ site.kofi_username }}](https://ko-fi.com/{{ site.kofi_username }})
 
 </div>
