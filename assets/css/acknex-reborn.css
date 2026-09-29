@@ -1,0 +1,194 @@
+/* ACKNEX Reborn project page. Loaded only by acknex-reborn.md (extra_css).
+ * Colours follow the site's minima variables: background #424242,
+ * text #cdcdcd, accent #ecab1f. */
+
+.ar-hero {
+  text-align: center;
+  padding: 10px 0 20px;
+}
+.ar-hero .ar-tagline {
+  font-size: 1.2em;
+  margin: 0 auto 12px;
+  max-width: 640px;
+}
+.ar-badge {
+  display: inline-block;
+  font-size: 0.75em;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #2b2b2b;
+  background: #ecab1f;
+  border-radius: 3px;
+  padding: 2px 8px;
+  vertical-align: middle;
+}
+
+/* ---- Downloads ------------------------------------------------------- */
+.ar-downloads {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 18px 0 8px;
+}
+.ar-btn {
+  display: inline-block;
+  min-width: 220px;
+  padding: 12px 20px;
+  border: 2px solid #ecab1f;
+  border-radius: 6px;
+  background: #ecab1f;
+  color: #2b2b2b !important;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none !important;
+}
+.ar-btn small {
+  display: block;
+  font-weight: 400;
+  font-size: 0.8em;
+}
+.ar-btn:hover,
+.ar-btn:focus {
+  background: transparent;
+  color: #ecab1f !important;
+}
+.ar-note {
+  font-size: 0.875em;
+  color: #b2b2b2;
+  text-align: center;
+  margin-top: 4px;
+}
+
+/* ---- Screenshots ----------------------------------------------------- */
+.ar-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin: 10px 0 24px;
+}
+.ar-gallery figure {
+  margin: 0;
+}
+.ar-gallery img,
+.ar-shot-empty {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 4px;
+  background: #383838;
+}
+.ar-gallery a img:hover {
+  outline: 2px solid #ecab1f;
+}
+.ar-shot-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed #5e5e5e;
+  color: #8a8a8a;
+  font-size: 0.875em;
+  box-sizing: border-box;
+}
+.ar-gallery figcaption {
+  font-size: 0.875em;
+  color: #b2b2b2;
+  margin-top: 4px;
+}
+
+/* ---- Feature cards --------------------------------------------------- */
+.ar-features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin: 10px 0 24px;
+}
+.ar-card {
+  background: #383838;
+  border-left: 3px solid #ecab1f;
+  border-radius: 4px;
+  padding: 12px 14px;
+}
+.ar-card h4 {
+  margin: 0 0 4px;
+  color: #ecab1f;
+}
+.ar-card p {
+  margin: 0;
+  font-size: 0.95em;
+}
+
+/* ---- Option tables --------------------------------------------------- */
+.ar-options table {
+  width: 100%;
+  font-size: 0.9em;
+  margin-bottom: 18px;
+}
+.ar-options td:nth-child(2),
+.ar-options th:nth-child(2) {
+  white-space: nowrap;
+}
+.ar-options code {
+  font-size: 0.95em;
+}
+
+/* ---- Troubleshooting ------------------------------------------------- */
+.ar-faq details {
+  background: #383838;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  padding: 0 14px;
+}
+.ar-faq summary {
+  cursor: pointer;
+  font-weight: 700;
+  padding: 10px 0;
+}
+.ar-faq summary:hover {
+  color: #ecab1f;
+}
+.ar-faq details[open] {
+  padding-bottom: 10px;
+}
+.ar-faq details p:last-child,
+.ar-faq details ul:last-child {
+  margin-bottom: 0;
+}
+
+/* ---- About ----------------------------------------------------------- */
+.ar-about {
+  background: #383838;
+  border-radius: 4px;
+  padding: 14px 18px;
+}
+.ar-about p:last-child {
+  margin-bottom: 0;
+}
+
+kbd {
+  display: inline-block;
+  padding: 1px 6px;
+  font-size: 0.85em;
+  font-family: inherit;
+  color: #2b2b2b;
+  background: #cdcdcd;
+  border-radius: 3px;
+  border-bottom: 2px solid #8a8a8a;
+}
+
+@media screen and (max-width: 600px) {
+  .ar-gallery,
+  .ar-features {
+    grid-template-columns: 1fr;
+  }
+  .ar-btn {
+    min-width: 0;
+    width: 100%;
+  }
+  .ar-options td:nth-child(2),
+  .ar-options th:nth-child(2) {
+    white-space: normal;
+  }
+}

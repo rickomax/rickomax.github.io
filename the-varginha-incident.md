@@ -1,19 +1,19 @@
 ---
-layout: page
-title: ACKNEX Remastered
-title_nav: ACKNEX Remastered
+layout: null
 permalink: /the-varginha-incident/
+sitemap: false
 ---
-
-A community project bringing classic 3D GameStudio A3 games to modern systems via a Unity-based source port. Dev chat, builds, and game compatibility.<br>
-
-Join us on Discord:<br>
-[Discord server](https://discord.gg/kK8tWjQr)
-
-Features:<br>
-- Improved resolution (Up to 4k support)
-- Improved framerate
-- Native Windows binaries
-- Improved mouse-look
-- Improved controls
-- Mods support
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Redirecting to ACKNEX Reborn</title>
+  <link rel="canonical" href="{{ '/acknex-reborn/' | relative_url }}">
+  <meta http-equiv="refresh" content="0; url={{ '/acknex-reborn/' | relative_url }}">
+  <meta name="robots" content="noindex">
+  <script>location.replace("{{ '/acknex-reborn/' | relative_url }}");</script>
+</head>
+<body>
+  <p>This page has moved to <a href="{{ '/acknex-reborn/' | relative_url }}">ACKNEX Reborn</a>.</p>
+</body>
+</html>

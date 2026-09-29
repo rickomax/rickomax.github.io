@@ -6,6 +6,9 @@
   <link rel="stylesheet" type="text/css" href="{{ "/assets/css/reset.css" | relative_url }}"/>
   <link rel="stylesheet" type="text/css" href="{{ '/assets/css/video-container.css' | relative_url }}"/>
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+  {%- if page.extra_css -%}
+  <link rel="stylesheet" href="{{ page.extra_css | relative_url }}">
+  {%- endif -%}
   {%- feed_meta -%}
   {%- if jekyll.environment == 'production' and site.google_analytics -%}
     {%- include google-analytics.html -%}
