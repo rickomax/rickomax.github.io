@@ -103,7 +103,7 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-  color: darken($brand-color, 15%);
+  color: $brand-color;
   text-decoration: none;
 
   &:visited {
@@ -111,7 +111,8 @@ a {
   }
 
   &:hover {
-    color: $brand-color;
+    color: $brand-color-light;
+    text-decoration: underline;
   }
 
   .social-media-list &:hover {
@@ -128,12 +129,11 @@ a {
  * Blockquotes
  */
 blockquote {
-  color: $grey-color;
-  border-left: 4px solid $grey-color-light;
-  padding-left: $spacing-unit / 2;
-  @include relative-font-size(1.125);
-  letter-spacing: -1px;
-  font-style: italic;
+  color: $text-color;
+  background-color: $surface-color;
+  border-left: 4px solid $brand-color;
+  border-radius: 0 6px 6px 0;
+  padding: ($spacing-unit / 3) ($spacing-unit / 2);
 
   > :last-child {
     margin-bottom: 0;
@@ -148,9 +148,10 @@ blockquote {
 pre,
 code {
   @include relative-font-size(0.9375);
-  border: 1px solid $grey-color-light;
-  border-radius: 3px;
-  background-color: #eef;
+  border: 1px solid $border-color;
+  border-radius: 4px;
+  background-color: $surface-alt;
+  color: $brand-color-light;
 }
 
 code {
@@ -231,23 +232,33 @@ table {
   margin-bottom: $spacing-unit;
   width: 100%;
   text-align: $table-text-align;
-  color: lighten($text-color, 18%);
+  color: $text-color;
   border-collapse: collapse;
-  border: 1px solid $grey-color-light;
+  border: 1px solid $border-color;
+  background-color: $surface-color;
   tr {
     &:nth-child(even) {
-      background-color: lighten($grey-color-light, 6%);
+      background-color: $surface-alt;
     }
   }
   th, td {
-    padding: ($spacing-unit / 3) ($spacing-unit / 2);
+    padding: ($spacing-unit / 4) ($spacing-unit / 2.5);
+    vertical-align: top;
   }
   th {
-    background-color: lighten($grey-color-light, 3%);
-    border: 1px solid darken($grey-color-light, 4%);
-    border-bottom-color: darken($grey-color-light, 12%);
+    background-color: darken($surface-color, 3%);
+    color: $brand-color-light;
+    font-weight: 600;
+    border: 1px solid $border-color;
+    border-bottom: 2px solid $brand-color;
   }
   td {
-    border: 1px solid $grey-color-light;
+    border: 1px solid $border-color;
+  }
+
+  // A table wider than a phone scrolls sideways rather than widening the page.
+  @include media-query($on-palm) {
+    display: block;
+    overflow-x: auto;
   }
 }

@@ -102,6 +102,10 @@ they looked in 1998, or turn on modern graphics and controls.
     <p>Support for games made for older engine versions, CD music from .ogg files, and ready-made settings for known games.</p>
   </div>
   <div class="ar-card">
+    <h4>Two-player network play</h4>
+    <p>As limited as in the original engine for now, with plans to expand it in the future.</p>
+  </div>
+  <div class="ar-card">
     <h4>Easy launcher</h4>
     <p>Pick a game, choose your options and play. Your settings are remembered.</p>
   </div>
@@ -189,6 +193,10 @@ The **Run** button stays greyed out until a script or an archive is chosen.
 
 Two players can play games that support it, over the local network or the
 internet.
+
+> **Network play is very limited for now**, just as it was in the original
+> engine: two players only, and only in games that were made for it. There
+> are plans to expand it in future versions.
 
 | Option | Switch | What it does |
 |---|---|---|
@@ -400,7 +408,7 @@ Those options only work with the *OpenGL renderer*. Turn it on first.
 <details markdown="1">
 <summary>There is no music</summary>
 
-- For MIDI music, keep `soundfont.sf2` in the same folder as `wwrun`.
+- For MIDI music, keep `FluidR3_GM.sf2` in the same folder as `wwrun`.
 - For CD music, copy the CD's audio tracks into the game's folder as
   `track2.ogg`, `track3.ogg` and so on (the same numbers as on the CD), and
   keep *CD music from .ogg files* on.
@@ -456,6 +464,14 @@ Special thanks to:
 
 Johann Christian Lotter, creator of ACKNEX / 3D GameStudio, and the entire
 ACKNEX Reborn community.
+
+Third-party software:
+
+SDL 3 and SDL_mixer (zlib License); Dear ImGui, libui-ng, TinySoundFont and
+stb_vorbis (MIT License); TiMidity (Artistic License); Superluminal
+PerformanceAPI (BSD License); the FluidR3_GM SoundFont by Frank Wen and Toby
+Smithe (MIT License). The full license texts are in LICENSES.txt, next to the
+program.
 
 Website: [https://rickomax.github.io/acknex-reborn](https://rickomax.github.io/acknex-reborn)<br>
 Discord: [{{ page.discord }}]({{ page.discord }})<br>

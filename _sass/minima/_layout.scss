@@ -2,8 +2,9 @@
  * Site header
  */
 .site-header {
-  border-top: 5px solid $grey-color-dark;
-  border-bottom: 1px solid $grey-color-light;
+  border-top: 3px solid $brand-color;
+  border-bottom: 1px solid $border-color;
+  background-color: $surface-color;
   min-height: $spacing-unit * 1.865;
 
   // Positioning context for the mobile navigation icon
@@ -21,6 +22,10 @@
   &,
   &:visited {
     color: $brand-color-light;
+  }
+
+  &:hover {
+    text-decoration: none;
   }
 }
 
@@ -47,8 +52,13 @@
       margin-right: 20px;
     }
 
+    &:hover {
+      color: $brand-color;
+      text-decoration: none;
+    }
+
     &.current {
-        text-shadow: 1px 0px 0px $text-color;
+      color: $brand-color;
     }
   }
 
@@ -56,9 +66,9 @@
     position: absolute;
     top: 9px;
     right: $spacing-unit / 2;
-    background-color: $background-color;
-    border: 1px solid $grey-color-light;
-    border-radius: 5px;
+    background-color: $surface-color;
+    border: 1px solid $border-color;
+    border-radius: 6px;
     text-align: right;
 
     label[for="nav-trigger"] {
@@ -80,7 +90,7 @@
       text-align: center;
 
       > svg {
-        fill: $grey-color-dark;
+        fill: $text-color;
       }
     }
 
@@ -112,7 +122,8 @@
  * Site footer
  */
 .site-footer {
-  border-top: 1px solid $grey-color-light;
+  border-top: 1px solid $border-color;
+  background-color: $surface-color;
   padding: $spacing-unit 0;
 }
 
@@ -188,6 +199,23 @@
 
 .page-heading {
   @include relative-font-size(2);
+}
+
+// Section headings inside pages: a little weight and an accent rule, so a
+// long page is easy to scan.
+.post-content {
+  h2 {
+    font-weight: 600;
+    margin-top: $spacing-unit * 1.2;
+    padding-bottom: 6px;
+    border-bottom: 1px solid $border-color;
+  }
+
+  h3 {
+    font-weight: 600;
+    color: $brand-color-light;
+    margin-top: $spacing-unit;
+  }
 }
 
 .post-list-heading {

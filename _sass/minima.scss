@@ -16,20 +16,25 @@ $spacing-unit:     30px !default;
 
 // $grey-color:       #828282 !default;
 
-$text-color:       #cdcdcd !default;
-$background-color: #424242 !default;
+// Dark theme. Surfaces step up in lightness from the page background;
+// borders sit one step above the surfaces.
+$text-color:       #d9dbe0 !default;
+$background-color: #1b1c20 !default;
+$surface-color:    #24262b !default;   // cards, header, footer, table rows
+$surface-alt:      #2c2f35 !default;   // table headers, code, zebra rows
+$border-color:     #3a3e46 !default;
 $brand-color:      #ecab1f !default;
 
-$brand-color-light: lighten($brand-color, 50%) !default;
+$brand-color-light: #f6cf73 !default;
 
-$grey-color:       #b2b2b2 !default;
-$grey-color-light: lighten($grey-color, 40%) !default;
-$grey-color-dark:  darken($grey-color, 25%) !default;
+$grey-color:       #9ea3ac !default;   // secondary text
+$grey-color-light: $border-color !default;
+$grey-color-dark:  #6d727c !default;
 
 $table-text-align: left !default;
 
 // Width of the content area
-$content-width:    800px !default;
+$content-width:    960px !default;
 
 $on-palm:          600px !default;
 $on-laptop:        800px !default;
