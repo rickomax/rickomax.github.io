@@ -119,7 +119,7 @@ they looked in 1998, or turn on modern graphics and controls.
 
 1. **Download** the build for your system and extract it to a folder of its
    own, for example `C:\Games\ACKNEX Reborn` or `~/acknex-reborn`.
-2. **Start it.** Run `wwrun.exe` on Windows, or `wwrun` on Linux. With no
+2. **Start it.** Run `acknexreborn.exe` on Windows, or `acknexreborn` on Linux. With no
    arguments it opens the launcher.
 3. **Pick the game.** On the **Game** tab, press **Browse** next to *Script*
    and choose the game's `.WDL` file. For a game shipped as one archive, choose
@@ -136,8 +136,8 @@ While playing:
 | <kbd>F10</kbd> | Quits, in most games |
 
 You can also skip the launcher and start a game from its folder:
-`wwrun GAME.WDL` followed by any of the switches listed below, for example
-`wwrun GAME.WDL -GL -WS -ML`. Settings from the launcher still apply;
+`acknexreborn GAME.WDL` followed by any of the switches listed below, for example
+`acknexreborn GAME.WDL -GL -WS -ML`. Settings from the launcher still apply;
 switches on the command line win.
 
 ## Launcher options
@@ -258,6 +258,7 @@ without it.
 | Engine default keys | `-IWDL` | Adds the engine's default keys, such as <kbd>F10</kbd> to quit. A game's own keys win. | On |
 | Support games for engine V3.680 | `-V368` | Lets games made for the older V3.680 engine load. | On |
 | Support games for engine V3.56 | `-V356` | Lets games made for the older V3.56 engine load. | On |
+| Support games for engine V3.08 | `-V308` | Lets games made for the 1995 V3.08 engine load. | On |
 
 Some games need particular settings to work, for example with mouse look off.
 ACKNEX Reborn recognises these games and applies those settings for you.
@@ -341,17 +342,17 @@ The beta builds are not signed yet. Choose **More info**, then
 <details markdown="1">
 <summary>On Linux, nothing happens when I start it</summary>
 
-- Make sure the file is executable: `chmod +x wwrun`.
+- Make sure the file is executable: `chmod +x acknexreborn`.
 - Start it from a terminal to see any error message.
 - The launcher needs GTK 3, which most desktops already have. You can also
-  skip the launcher and start a game directly: `./wwrun GAME.WDL`.
+  skip the launcher and start a game directly: `./acknexreborn GAME.WDL`.
 </details>
 
 <details markdown="1">
 <summary>The game stops with a script error while loading</summary>
 
-- Check that *Support games for engine V3.680* and *Support games for engine
-  V3.56* are on (Enhancements tab). Many older games need one of them.
+- Check that the three *Support games for engine ...* options (V3.680, V3.56
+  and V3.08) are on (Enhancements tab). Many older games need one of them.
 - If the game still stops, turn on *Error limit* on the Game tab and set it
   to a few errors, so the game keeps going past them.
 - Please report the game on Discord, with the error message.
@@ -408,7 +409,7 @@ Those options only work with the *OpenGL renderer*. Turn it on first.
 <details markdown="1">
 <summary>There is no music</summary>
 
-- For MIDI music, keep `FluidR3_GM.sf2` in the same folder as `wwrun`.
+- For MIDI music, keep `FluidR3_GM.sf2` in the same folder as `acknexreborn`.
 - For CD music, copy the CD's audio tracks into the game's folder as
   `track2.ogg`, `track3.ogg` and so on (the same numbers as on the CD), and
   keep *CD music from .ogg files* on.
