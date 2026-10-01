@@ -12,6 +12,26 @@ download_win64: "#"      # replace with the Windows 64-bit download URL
 download_linux64: "#"    # replace with the Linux 64-bit download URL
 discord: "https://discord.gg/Fdz6kjX8Jk"
 
+# Compatible games. `download` is optional; leave it out when there is no
+# official download.
+games:
+  - name: "3D Hunting: Grizzly"
+  - name: "3D Hunting: Shark"
+  - name: "3D Hunting: Trophy Game"
+  - name: "3D Hunting Trophy: Whitetail"
+  - name: "Angst: Rahz' Revenge"
+  - name: "Black Bekker"
+    download: "https://minbekker.itch.io/blackbekker"
+  - name: "Der Name des Bruders"
+  - name: "Hades 2"
+    download: "http://www.espacoinf.com/hades2.htm"
+  - name: "Incidente em Varginha"
+  - name: "Mr. Pibb: The 3D Interactive Game"
+  - name: "Saints of Virtue"
+    download: "https://saintsofvirtuex.com/page/download/"
+  - name: "Skaphander: Der Auftrag"
+  - name: "Taco Bell Tasty Temple Challenge"
+
 # Screenshots: put the images in /assets/img/acknex-reborn/ and fill in `src`.
 # An entry with an empty `src` shows a placeholder box.
 screenshots:
@@ -114,6 +134,31 @@ they looked in 1998, or turn on modern graphics and controls.
     <p>Press <kbd>F11</kbd> while playing to change most options live and see the result at once.</p>
   </div>
 </div>
+
+## Compatible games
+
+These are some of the games known to work. Many other A3 games have been
+tested as well, so this is not a complete list: if a game you have isn't
+here, try it, and tell us on [Discord]({{ page.discord }}) how it went.
+
+<div class="ar-options">
+<table>
+  <thead>
+    <tr><th>Game</th><th>Download</th></tr>
+  </thead>
+  <tbody>
+{%- for game in page.games %}
+    <tr>
+      <td>{{ game.name }}</td>
+      <td>{%- if game.download -%}<a href="{{ game.download }}">Download</a>{%- endif -%}</td>
+    </tr>
+{%- endfor %}
+  </tbody>
+</table>
+</div>
+
+Downloads are on each game's own site. ACKNEX Reborn does not include any
+game.
 
 ## Getting started
 
@@ -246,7 +291,7 @@ without it.
 | Smooth movement between steps | `-INTERP` | Smooths movement between steps, for high refresh rate displays. Adds a tiny delay. | On |
 | Don't smooth jumps and spawns | `-INTERPTGT` | Objects that appear or jump somewhere, like a fired shot, don't slide there. | On |
 | Fix texture animation speed | `-FCD` | Animated textures run at their intended speed, not as fast as the frame rate. | On |
-| Fix jumps and falls | `-FVZ` | Jumps and falls behave the same at any frame rate. *Jump and fall strength* adjusts them; raise it if jumps feel too low. | On, 200% |
+| Fix jumps and falls | `-FVZ` | Jumps and falls behave the same at any frame rate. *Jump and fall strength* adjusts them; 400% matches the original game running at 16 frames a second. | On, 400% |
 | Fix walking through walls at corners | `-FWALL` | Stops the player slipping through walls at some corners. | On |
 
 **Compatibility**
