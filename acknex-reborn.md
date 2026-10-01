@@ -117,11 +117,11 @@ they looked in 1998, or turn on modern graphics and controls.
   </div>
   <div class="ar-card">
     <h4>Fixes for old bugs</h4>
-    <p>Many bugs from the original engine are fixed, so games play the way they were meant to on today's computers.</p>
+    <p>Issues that only show up on today's computers are fixed, so games play the way they were meant to.</p>
   </div>
   <div class="ar-card">
     <h4>Plays more games</h4>
-    <p>Support for games made for older engine versions, CD music from .ogg files, and ready-made settings for known games.</p>
+    <p>Various compatible games.</p>
   </div>
   <div class="ar-card">
     <h4>Easy launcher</h4>
@@ -165,7 +165,7 @@ While playing:
 | Key | Does |
 |---|---|
 | <kbd>F11</kbd> | Opens the in-game panel (you can change this key in the launcher) |
-| <kbd>Alt</kbd>+<kbd>Enter</kbd> | Switches between fullscreen and a window |
+| <kbd>Alt</kbd>+<kbd>Enter</kbd> | Switches between fullscreen and a window. The next start uses whichever you left it in |
 | <kbd>F10</kbd> | Quits, in most games |
 
 You can also skip the launcher and start a game from its folder:
@@ -220,7 +220,7 @@ The **Run** button stays greyed out until a script or an archive is chosen.
 | Exclusive fullscreen | `-FSEXCL` | Fullscreen changes the monitor's resolution. Off: borderless fullscreen at desktop resolution. |
 | No vsync | `-NVSYNC` | Stops waiting for the display. Very high frame rates can break some games. |
 | Frame cap when vsync is off | `-MAXFPS` | Limits the frame rate while vsync is off. Default 500; 0 is no limit. |
-| Window size | `-RESW` / `-RESH` | The window's size. The picture is scaled to fit it. Default 1600 &times; 1200. |
+| Window size | `-RESW` / `-RESH` | The window's size. The picture is scaled to fit it. Resizing the window while playing changes it, and the next start opens at that size. Default 1600 &times; 1200. |
 
 ### Network
 
@@ -275,11 +275,10 @@ without it.
 | Option | Switch | What it does | Default |
 |---|---|---|---|
 | Fixed game speed | `-DETERMINISTIC` | The game runs at a fixed rate, the same on every computer. | On |
-| Steps per second | `-SIMHZ` | 16 matches the original. 32 or more is smoother; keep the jump and texture fixes on with it. | 32 |
-| Smooth movement between steps | `-INTERP` | Smooths movement between steps, for high refresh rate displays. Adds a tiny delay. | On |
-| Don't smooth jumps and spawns | `-INTERPTGT` | Objects that appear or jump somewhere, like a fired shot, don't slide there. | On |
+| Steps per second | `-SIMHZ` | 16 matches the original. 32 or more is smoother; keep the texture fix on with it. | 32 |
+| Smooth movement between steps | `-INTERP` | Smooths movement between steps, for high refresh rate displays. Adds a tiny delay. Things that appear or jump somewhere, like a fired shot, are shown there at once rather than sliding there. | On |
 | Fix texture animation speed | `-FCD` | Animated textures run at their intended speed, not as fast as the frame rate. | On |
-| Fix jumps and falls | `-FVZ` | Jumps and falls behave the same at any frame rate. *Jump and fall strength* adjusts them; 400% matches the original game running at 16 frames a second. | On, 400% |
+| Fix jumps and falls | `-FVZ` | Jumps and falls behave the same at any frame rate. *Jump and fall strength* adjusts them; 400% matches the original game running at 16 frames a second. Changes how high every game jumps, so it is off unless you need it. | Off, 400% |
 | Fix walking through walls at corners | `-FWALL` | Stops the player slipping through walls at some corners. | On |
 
 **Compatibility**
@@ -344,7 +343,9 @@ as the launcher's Devices, Display, Enhancements, Keys and Joystick tabs, and
 most of them take effect immediately, so you can try a field of view,
 widescreen or mouse sensitivity and see the result at once. A few options can
 only be set before the game starts; the panel shows them greyed out, with a
-note to change them in the launcher.
+note to change them in the launcher. What you change in the panel is saved
+when the game closes, along with fullscreen or window and the window's size,
+so the next start picks up where you left off.
 
 ## Troubleshooting
 
@@ -411,17 +412,17 @@ key, edit the rows on the **Keys** tab.
 <details markdown="1">
 <summary>The game runs too fast, or animations are too fast</summary>
 
-Keep *Fixed game speed*, *Fix texture animation speed* and *Fix jumps and
-falls* on, and leave vsync on (*No vsync* off). If you turned vsync off, set
+Keep *Fixed game speed* and *Fix texture animation speed* on, and leave vsync
+on (*No vsync* off). If you turned vsync off, set
 *Frame cap when vsync is off* to a normal value such as 144.
 </details>
 
 <details markdown="1">
 <summary>Jumps are too high or too low</summary>
 
-With *Fix jumps and falls* on, adjust *Jump and fall strength*. You can do
-this live in the in-game panel (<kbd>F11</kbd>) to find the right value for a
-game.
+Turn on *Fix jumps and falls* (Enhancements tab) and adjust *Jump and fall
+strength*. You can do this live in the in-game panel (<kbd>F11</kbd>) to find
+the right value for a game.
 </details>
 
 <details markdown="1">
