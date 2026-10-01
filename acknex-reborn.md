@@ -31,6 +31,7 @@ games:
     download: "https://saintsofvirtuex.com/page/download/"
   - name: "Skaphander: Der Auftrag"
   - name: "Taco Bell Tasty Temple Challenge"
+  - name: "Virus Explosion"
 
 # Screenshots: put the images in /assets/img/acknex-reborn/ and fill in `src`.
 # An entry with an empty `src` shows a placeholder box.
