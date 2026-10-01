@@ -115,7 +115,7 @@ they looked in 1998, or turn on modern graphics and controls.
   </div>
   <div class="ar-card">
     <h4>Fixes for old bugs</h4>
-    <p>Jumps, falls and texture animations no longer depend on the frame rate, and you can no longer slip through walls at some corners.</p>
+    <p>Many bugs from the original engine are fixed, so games play the way they were meant to on today's computers.</p>
   </div>
   <div class="ar-card">
     <h4>Plays more games</h4>
@@ -141,21 +141,11 @@ These are some of the games known to work. Many other A3 games have been
 tested as well, so this is not a complete list: if a game you have isn't
 here, try it, and tell us on [Discord]({{ page.discord }}) how it went.
 
-<div class="ar-options">
-<table>
-  <thead>
-    <tr><th>Game</th><th>Download</th></tr>
-  </thead>
-  <tbody>
+<ul>
 {%- for game in page.games %}
-    <tr>
-      <td>{{ game.name }}</td>
-      <td>{%- if game.download -%}<a href="{{ game.download }}">Download</a>{%- endif -%}</td>
-    </tr>
+  <li>{{ game.name }}{% if game.download %} (<a href="{{ game.download }}">Download</a>){% endif %}</li>
 {%- endfor %}
-  </tbody>
-</table>
-</div>
+</ul>
 
 Downloads are on each game's own site. ACKNEX Reborn does not include any
 game.
