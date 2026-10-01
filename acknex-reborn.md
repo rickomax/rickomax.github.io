@@ -91,7 +91,7 @@ they looked in 1998, or turn on modern graphics and controls.
 <div class="ar-features">
   <div class="ar-card">
     <h4>Native Windows and Linux</h4>
-    <p>64-bit builds for both. No emulator, no compatibility mode.</p>
+    <p>64-bit builds, cross-compatible engine.</p>
   </div>
   <div class="ar-card">
     <h4>Two renderers</h4>
@@ -99,11 +99,11 @@ they looked in 1998, or turn on modern graphics and controls.
   </div>
   <div class="ar-card">
     <h4>Widescreen and any resolution</h4>
-    <p>Fill the whole screen instead of 4:3 with bars, at any window size up to 4K and beyond.</p>
+    <p>Fill the whole screen, at any window size up to 4K and beyond.</p>
   </div>
   <div class="ar-card">
     <h4>Better graphics</h4>
-    <p>Smooth distant textures, smooth fog, optional ambient occlusion and an adjustable field of view.</p>
+    <p>Filtered textures, optional ambient occlusion and an adjustable field of view.</p>
   </div>
   <div class="ar-card">
     <h4>Modern controls</h4>
@@ -111,7 +111,7 @@ they looked in 1998, or turn on modern graphics and controls.
   </div>
   <div class="ar-card">
     <h4>Smooth at high frame rates</h4>
-    <p>The game runs at a fixed speed on every computer, with smooth movement on high refresh rate displays.</p>
+    <p>Games run at a constant speed on every device.</p>
   </div>
   <div class="ar-card">
     <h4>Fixes for old bugs</h4>
@@ -122,16 +122,12 @@ they looked in 1998, or turn on modern graphics and controls.
     <p>Support for games made for older engine versions, CD music from .ogg files, and ready-made settings for known games.</p>
   </div>
   <div class="ar-card">
-    <h4>Two-player network play</h4>
-    <p>As limited as in the original engine for now, with plans to expand it in the future.</p>
-  </div>
-  <div class="ar-card">
     <h4>Easy launcher</h4>
-    <p>Pick a game, choose your options and play. Your settings are remembered.</p>
+    <p>Pick a game, choose your options and play.</p>
   </div>
   <div class="ar-card">
     <h4>In-game panel</h4>
-    <p>Press <kbd>F11</kbd> while playing to change most options live and see the result at once.</p>
+    <p>Press <kbd>F11</kbd> while playing to change options.</p>
   </div>
 </div>
 
