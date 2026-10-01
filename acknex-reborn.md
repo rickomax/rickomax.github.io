@@ -289,7 +289,7 @@ without it.
 | Engine default keys | `-IWDL` | Adds the engine's default keys, such as <kbd>F10</kbd> to quit. A game's own keys win. | On |
 | Support games for engine V3.680 | `-V368` | Lets games made for the older V3.680 engine load. | On |
 | Support games for engine V3.56 | `-V356` | Lets games made for the older V3.56 engine load. | On |
-| Support games for engine V3.08 | `-V308` | Lets games made for the 1995 V3.08 engine load. | On |
+| Support games for engine V3.08 | `-V308` | Plays games made for the 1995 V3.08 engine the way that engine did. Known V3.08 games turn it on by themselves; leave it off for others. | Off |
 
 Some games need particular settings to work, for example with mouse look off.
 ACKNEX Reborn recognises these games and applies those settings for you.
@@ -382,8 +382,9 @@ The beta builds are not signed yet. Choose **More info**, then
 <details markdown="1">
 <summary>The game stops with a script error while loading</summary>
 
-- Check that the three *Support games for engine ...* options (V3.680, V3.56
-  and V3.08) are on (Enhancements tab). Many older games need one of them.
+- Check that *Support games for engine V3.680* and *V3.56* are on
+  (Enhancements tab). Many older games need one of them. For a game from
+  1995, also try *V3.08*.
 - If the game still stops, turn on *Error limit* on the Game tab and set it
   to a few errors, so the game keeps going past them.
 - Please report the game on Discord, with the error message.
