@@ -29,6 +29,7 @@ games:
   - name: "Mr. Pibb: The 3D Interactive Game"
   - name: "Saints of Virtue"
     download: "https://saintsofvirtuex.com/page/download/"
+  - name: "Shadow of the Lost Citadel"
   - name: "Skaphander: Der Auftrag"
   - name: "Taco Bell Tasty Temple Challenge"
   - name: "Virus Explosion"
