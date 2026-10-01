@@ -97,7 +97,7 @@ they looked in 1998, or turn on modern graphics and controls.
   </div>
   <div class="ar-card">
     <h4>Two renderers</h4>
-    <p>A new OpenGL renderer, or the original software renderer exactly as it was. Switch between them while you play.</p>
+    <p>A new OpenGL renderer, or the original software renderer. Switch between them while you play.</p>
   </div>
   <div class="ar-card">
     <h4>Widescreen and any resolution</h4>
@@ -165,7 +165,7 @@ While playing:
 | Key | Does |
 |---|---|
 | <kbd>F11</kbd> | Opens the in-game panel (you can change this key in the launcher) |
-| <kbd>Alt</kbd>+<kbd>Enter</kbd> | Switches between fullscreen and a window. The next start uses whichever you left it in |
+| <kbd>Alt</kbd>+<kbd>Enter</kbd> | Switches between fullscreen and a window |
 | <kbd>F10</kbd> | Quits, in most games |
 
 You can also skip the launcher and start a game from its folder:
@@ -220,15 +220,15 @@ The **Run** button stays greyed out until a script or an archive is chosen.
 | Exclusive fullscreen | `-FSEXCL` | Fullscreen changes the monitor's resolution. Off: borderless fullscreen at desktop resolution. |
 | No vsync | `-NVSYNC` | Stops waiting for the display. Very high frame rates can break some games. |
 | Frame cap when vsync is off | `-MAXFPS` | Limits the frame rate while vsync is off. Default 500; 0 is no limit. |
-| Window size | `-RESW` / `-RESH` | The window's size. The picture is scaled to fit it. Resizing the window while playing changes it, and the next start opens at that size. Default 1600 &times; 1200. |
+| Window size | `-RESW` / `-RESH` | The window's size. The picture is scaled to fit it. Default 1600 &times; 1200. |
 
 ### Network
 
 Two players can play games that support it, over the local network or the
 internet.
 
-> **Network play is very limited for now**, just as it was in the original
-> engine: two players only, and only in games that were made for it. There
+> **Network play is very limited for now**: two players only, and only in
+> games that were made for it. There
 > are plans to expand it in future versions.
 
 | Option | Switch | What it does |
@@ -275,10 +275,10 @@ without it.
 | Option | Switch | What it does | Default |
 |---|---|---|---|
 | Fixed game speed | `-DETERMINISTIC` | The game runs at a fixed rate, the same on every computer. | On |
-| Steps per second | `-SIMHZ` | 16 matches the original. 32 or more is smoother; keep the texture fix on with it. | 32 |
-| Smooth movement between steps | `-INTERP` | Smooths movement between steps, for high refresh rate displays. Adds a tiny delay. Things that appear or jump somewhere, like a fired shot, are shown there at once rather than sliding there. | On |
+| Steps per second | `-SIMHZ` | 16 is the speed the games were made for. 32 or more is smoother; keep the texture fix on with it. | 32 |
+| Smooth movement between steps | `-INTERP` | Smooths movement between steps, for high refresh rate displays. Adds a tiny delay. | On |
 | Fix texture animation speed | `-FCD` | Animated textures run at their intended speed, not as fast as the frame rate. | On |
-| Fix jumps and falls | `-FVZ` | Jumps and falls behave the same at any frame rate. *Jump and fall strength* adjusts them; 400% matches the original game running at 16 frames a second. Changes how high every game jumps, so it is off unless you need it. | Off, 400% |
+| Fix jumps and falls | `-FVZ` | Jumps and falls behave the same at any frame rate. *Jump and fall strength* adjusts them; 400% matches the games running at 16 frames a second. | Off, 400% |
 | Fix walking through walls at corners | `-FWALL` | Stops the player slipping through walls at some corners. | On |
 
 **Compatibility**
@@ -290,7 +290,7 @@ without it.
 | Engine default keys | `-IWDL` | Adds the engine's default keys, such as <kbd>F10</kbd> to quit. A game's own keys win. | On |
 | Support games for engine V3.680 | `-V368` | Lets games made for the older V3.680 engine load. | On |
 | Support games for engine V3.56 | `-V356` | Lets games made for the older V3.56 engine load. | On |
-| Support games for engine V3.08 | `-V308` | Plays games made for the 1995 V3.08 engine the way that engine did. Known V3.08 games turn it on by themselves; leave it off for others. | Off |
+| Support games for engine V3.08 | `-V308` | Makes games made for the 1995 V3.08 engine version play correctly. Known V3.08 games turn it on by themselves; leave it off for others. | Off |
 
 Some games need particular settings to work, for example with mouse look off.
 ACKNEX Reborn recognises these games and applies those settings for you.
@@ -338,14 +338,9 @@ button live.
 
 ## The in-game panel
 
-Press <kbd>F11</kbd> while playing to open the panel. It has the same options
-as the launcher's Devices, Display, Enhancements, Keys and Joystick tabs, and
-most of them take effect immediately, so you can try a field of view,
-widescreen or mouse sensitivity and see the result at once. A few options can
-only be set before the game starts; the panel shows them greyed out, with a
-note to change them in the launcher. What you change in the panel is saved
-when the game closes, along with fullscreen or window and the window's size,
-so the next start picks up where you left off.
+Press <kbd>F11</kbd> while playing to open the panel. It has most of the
+launcher's options, and changes apply right away. They are saved for the
+next time you play.
 
 ## Troubleshooting
 
