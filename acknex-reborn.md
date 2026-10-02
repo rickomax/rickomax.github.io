@@ -496,7 +496,11 @@ what the console showed.
 ACKNEX 3 (3D GameStudio 3) is (C) oP group Germany GmbH.
 
 ACKNEX Reborn is developed and maintained by Ricardo Reis, with permission
-from oP group.
+from Johann Christian Lotter (oP group).
+
+ACKNEX Reborn is free. It may not be sold, or included with anything that
+is sold, without permission. The games it runs belong to their owners, and
+ACKNEX Reborn includes none of them.
 
 Special thanks to:
 
