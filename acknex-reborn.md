@@ -34,17 +34,17 @@ games:
   - name: "Taco Bell Tasty Temple Challenge"
   - name: "Virus Explosion"
 
-# Screenshots: put the images in /assets/img/acknex-reborn/ and fill in `src`.
+# Screenshots: put the images in /assets/img/ and fill in `src`.
 # An entry with an empty `src` shows a placeholder box.
 screenshots:
-  - src: ""
+  - src: "/assets/img/acknex_widescreen.png"
     caption: "OpenGL renderer in widescreen"
-  - src: ""
+  - src: "/assets/img/acknex_hardware.png"
+    caption: "OpenGL renderer"
+  - src: "/assets/img/acknex_software.png"
     caption: "The original software renderer"
-  - src: ""
+  - src: "/assets/img/acknex_launcher.png"
     caption: "The launcher"
-  - src: ""
-    caption: "The in-game panel"
 ---
 
 <div class="ar-hero">
@@ -222,6 +222,7 @@ The **Run** button stays greyed out until a script or an archive is chosen.
 | Start in a window | `-WND` | Starts in a window instead of fullscreen. **On** by default. |
 | Show the console | `-CONSOLE` | Opens a window with the engine's messages. Useful when reporting a problem. |
 | Exclusive fullscreen | `-FSEXCL` | Fullscreen changes the monitor's resolution. Off: borderless fullscreen at desktop resolution. |
+| Fullscreen as a window | `-FSWIN` | Fullscreen as a borderless window. Use it if the Windows Game Bar or another overlay doesn't appear over the game. |
 | No vsync | `-NVSYNC` | Stops waiting for the display. Very high frame rates can break some games. |
 | Frame cap when vsync is off | `-MAXFPS` | Limits the frame rate while vsync is off. Default 500; 0 is no limit. |
 | Window size | `-RESW` / `-RESH` | The window's size. The picture is scaled to fit it. Default 1600 &times; 1200. |
@@ -435,6 +436,12 @@ the right value for a game.
 <summary>Widescreen, ambient occlusion or other graphics options are greyed out</summary>
 
 Those options only work with the *OpenGL renderer*. Turn it on first.
+</details>
+
+<details markdown="1">
+<summary>I can't open the Windows Game Bar</summary>
+
+Turn on *Fullscreen as a window* (Display tab).
 </details>
 
 <details markdown="1">
