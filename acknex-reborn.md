@@ -8,8 +8,8 @@ description: Play classic 3D GameStudio A3 games on modern Windows and Linux.
 
 # ---- Edit these -----------------------------------------------------------
 version: "Beta 0.1"
-download_win64: "#"      # replace with the Windows 64-bit download URL
-download_linux64: "#"    # replace with the Linux 64-bit download URL
+download_win64: "https://ricardoreis.net/acknexreborn/ACKNEXReborn-0.1-windows-x64.zip"
+download_linux64: "https://ricardoreis.net/acknexreborn/ACKNEXReborn-0.1-linux-x86_64.tar.gz"
 discord: "https://discord.gg/Fdz6kjX8Jk"
 
 # Compatible games. `download` is optional; leave it out when there is no
