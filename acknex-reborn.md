@@ -160,6 +160,10 @@ game.
    you.
 4. **Press Run.** Your choices are saved and will be there next time.
 
+For most of the [compatible games](#compatible-games) there is a quicker way:
+extract the package into the game's own folder and run `acknexreborn` there.
+The game starts straight away.
+
 While playing:
 
 | Key | Does |
