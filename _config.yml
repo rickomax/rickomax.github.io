@@ -35,6 +35,7 @@ kofi_username: X8X3MRF5W
 # Navbars
 header_pages:
 - index.md
+- acknex-reborn.md
 - psxprev.md
 - trilib.md
 - misc-projects.md
