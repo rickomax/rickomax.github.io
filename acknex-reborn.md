@@ -7,7 +7,7 @@ extra_css: /assets/css/acknex-reborn.css
 description: Play classic 3D GameStudio A3 games on modern Windows and Linux.
 
 # ---- Edit these -----------------------------------------------------------
-version: "Beta"
+version: "Beta 0.1"
 download_win64: "#"      # replace with the Windows 64-bit download URL
 download_linux64: "#"    # replace with the Linux 64-bit download URL
 discord: "https://discord.gg/Fdz6kjX8Jk"
@@ -268,6 +268,7 @@ without it.
 |---|---|---|---|
 | Mouse look | `-ML` | Turns the view with the mouse, with separate X and Y sensitivity. Some cutscenes that turn the camera may not work. | On |
 | Modern WASD movement | `-MI` | The keys set on the Keys tab walk and sidestep, replacing the game's own movement. | On |
+| Trigger WASD events | `-MIEV` | The movement keys also reach the game, for cheats and keys it reads itself. Turn it off if W, A, S or D does something odd while you walk. Needs *Modern WASD movement*. | On |
 | Pin the cursor to the view's centre | `-CURLOCK` | Keeps the cursor on the crosshair, so clicks hit what you face. | Off |
 
 **Timing and physics**
@@ -402,6 +403,12 @@ feel wrong. Games known to need this get the right settings automatically.
 *Modern WASD movement* and *Key rebinding* change the controls on purpose. To
 play with the game's original controls, turn both off. To change a single
 key, edit the rows on the **Keys** tab.
+</details>
+
+<details markdown="1">
+<summary>A cheat or a typed word doesn't work</summary>
+
+Make sure *Trigger WASD events* is on, or turn *Modern WASD movement* off.
 </details>
 
 <details markdown="1">
