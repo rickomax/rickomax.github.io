@@ -78,7 +78,7 @@ screenshots:
       <li><strong>ANGST:</strong> the harpoon no longer explodes as soon as it's fired.</li>
       <li><strong>OpenGL:</strong> see-through surfaces are no longer drawn solid.</li>
       <li><strong>OpenGL:</strong> less flickering on wall decals.</li>
-      <li><strong>OpenGL:</strong> held weapons, such as the sword in Adeptus, are now drawn.</li>
+      <li><strong>OpenGL:</strong> held weapons are now drawn.</li>
     </ul>
   </details>
 </div>
