@@ -67,8 +67,8 @@ screenshots:
     Questions and bug reports: <a href="{{ page.discord }}">Discord</a>.
   </p>
 
-  <div class="ar-new">
-    <h4><span class="ar-badge">New</span> What's new in {{ page.version }}</h4>
+  <details class="ar-new">
+    <summary>Update {{ page.version | remove: "Beta " }} available: what's new</summary>
     <ul>
       <li><strong>ANGST:</strong> the English release now loads.</li>
       <li><strong>ANGST:</strong> crabs no longer sink into the floor.</li>
@@ -80,7 +80,7 @@ screenshots:
       <li><strong>OpenGL:</strong> less flickering on wall decals.</li>
       <li><strong>OpenGL:</strong> held weapons, such as the sword in Adeptus, are now drawn.</li>
     </ul>
-  </div>
+  </details>
 </div>
 
 ACKNEX Reborn is a native port of the ACKNEX 3 engine, the runtime behind games
