@@ -7,9 +7,9 @@ extra_css: /assets/css/acknex-reborn.css
 description: Play classic 3D GameStudio A3 games on modern Windows and Linux.
 
 # ---- Edit these -----------------------------------------------------------
-version: "Beta 0.1"
-download_win64: "https://ricardoreis.net/acknexreborn/ACKNEXReborn-0.1-windows-x64.zip"
-download_linux64: "https://ricardoreis.net/acknexreborn/ACKNEXReborn-0.1-linux-x86_64.tar.gz"
+version: "Beta 0.2"
+download_win64: "https://ricardoreis.net/acknexreborn/ACKNEXReborn-0.2-windows-x64.zip"
+download_linux64: "https://ricardoreis.net/acknexreborn/ACKNEXReborn-0.2-linux-x86_64.tar.gz"
 discord: "https://discord.gg/Fdz6kjX8Jk"
 
 # Compatible games. `download` is optional; leave it out when there is no
