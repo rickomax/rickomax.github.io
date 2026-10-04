@@ -71,13 +71,13 @@ screenshots:
   <details class="ar-new">
     <summary>Update {{ page.version | remove: "Beta " }} available: what's new</summary>
     <ul>
-      <li><strong>Game videos:</strong> Incidente em Varginha, Alien Anarchy and Saints of Virtue can play their videos again, from <code>.MPG</code> files, with their own volume setting (see <a href="#game-videos">Game videos</a>).</li>
+      <li><strong>Game videos:</strong> Incidente em Varginha, Alien Anarchy and Saints of Virtue can play their videos from <code>.MPG</code> files, with their own volume setting (see <a href="#game-videos">Game videos</a>).</li>
       <li><strong>Game options:</strong> some games ask about their own options before starting, such as the language, left-handed mouse buttons or skipping the intro.</li>
-      <li><strong>Alien Anarchy:</strong> starts in English, and goes on after the first level instead of quitting.</li>
+      <li><strong>Alien Anarchy:</strong> starts in English and plays past the first level.</li>
       <li><strong>Hades 2:</strong> starts with the game's own WASD and mouse controls.</li>
       <li><strong>Mouse:</strong> the sensitivity also sets a game's own mouse speed when mouse look is off.</li>
       <li><strong>New option:</strong> "Don't fall through narrow gaps".</li>
-      <li><strong>Starting:</strong> starting the program in a game's folder uses the launcher's default settings, and a game can be started by naming its folder.</li>
+      <li><strong>Starting:</strong> a game can be started by naming its folder (see <a href="#getting-started">Getting started</a>).</li>
     </ul>
   </details>
 </div>
@@ -107,7 +107,7 @@ they looked in 1998, or turn on modern graphics and controls.
 <div class="ar-features">
   <div class="ar-card">
     <h4>Native Windows and Linux</h4>
-    <p>64-bit builds, cross-compatible engine.</p>
+    <p>64-bit builds for both.</p>
   </div>
   <div class="ar-card">
     <h4>Two renderers</h4>
@@ -130,12 +130,12 @@ they looked in 1998, or turn on modern graphics and controls.
     <p>Games run at a constant speed on every device.</p>
   </div>
   <div class="ar-card">
-    <h4>Fixes for old bugs</h4>
+    <h4>Fixes for modern computers</h4>
     <p>Issues that only show up on today's computers are fixed, so games play the way they were meant to.</p>
   </div>
   <div class="ar-card">
-    <h4>Plays more games</h4>
-    <p>Various compatible games.</p>
+    <h4>Many compatible games</h4>
+    <p>See the <a href="#compatible-games">list below</a>.</p>
   </div>
   <div class="ar-card">
     <h4>Easy launcher</h4>
@@ -166,8 +166,8 @@ game.
 
 1. **Download** the build for your system and extract it to a folder of its
    own, for example `C:\Games\ACKNEX Reborn` or `~/acknex-reborn`.
-2. **Start it.** Run `acknexreborn.exe` on Windows, or `acknexreborn` on Linux. With no
-   arguments it opens the launcher.
+2. **Start it.** Run `acknexreborn.exe` on Windows, or `acknexreborn` on Linux. It
+   opens the launcher.
 3. **Pick the game.** On the **Game** tab, press **Browse** next to *Script*
    and choose the game's `.WDL` file. For a game shipped as one archive, choose
    its `.WRS` file under *Archive* instead. The game's folder is filled in for
@@ -177,8 +177,7 @@ game.
 For most of the [compatible games](#compatible-games) there is a quicker way:
 extract the package into the game's own folder and run `acknexreborn` there.
 The game starts straight away. A few games first ask about their own options,
-such as the language or skipping the intro; your choices are ticked again next
-time.
+such as the language or skipping the intro.
 
 While playing:
 
@@ -190,8 +189,9 @@ While playing:
 
 You can also skip the launcher and start a game from its folder:
 `acknexreborn GAME.WDL` followed by any of the switches listed below, for example
-`acknexreborn GAME.WDL -GL -WS -ML`. Settings from the launcher still apply;
-switches on the command line win.
+`acknexreborn GAME.WDL -GL -WS -ML`. For one of the compatible games you can
+name its folder instead, from anywhere: `acknexreborn D:\games\hades2`.
+Settings from the launcher still apply; switches on the command line win.
 
 ## Launcher options
 
@@ -210,13 +210,11 @@ launcher for a short description.
 | Script | `-WDL` | The game's main script (`.WDL`) to run. |
 | Archive | `-WRS` | The game's resource archive (`.WRS`), for games shipped as one file. |
 | Map | `-WMP` | Loads a different map instead of the one the game names. |
-| Data file | `-WDF` | Reads a different data file instead of `WWRUN.WDF`. |
+| Data file | `-WDF` | Uses a different data file. Only needed if a game's instructions ask for it. |
 | Game folder | | The game's folder. Filled in when you pick a file with Browse. |
 | Save path | `-DIR` | Where saved games go. |
 | Define | `-D name,value` | Passes a setting to the game. Only needed if a game's instructions ask for it. |
 | Error limit | `-E` | Keeps going past this many script errors instead of stopping at the first. |
-
-The **Run** button stays greyed out until a script or an archive is chosen.
 
 ### Devices
 
@@ -239,25 +237,21 @@ The **Run** button stays greyed out until a script or an archive is chosen.
 | Show the console | `-CONSOLE` | Opens a window with the engine's messages. Useful when reporting a problem. |
 | Exclusive fullscreen | `-FSEXCL` | Fullscreen changes the monitor's resolution. Off: borderless fullscreen at desktop resolution. |
 | Fullscreen as a window | `-FSWIN` | Fullscreen as a borderless window. Use it if the Windows Game Bar or another overlay doesn't appear over the game. |
-| No vsync | `-NVSYNC` | Stops waiting for the display. Very high frame rates can break some games. |
+| No vsync | `-NVSYNC` | Turns off vsync. Very high frame rates can break some games. |
 | Frame cap when vsync is off | `-MAXFPS` | Limits the frame rate while vsync is off. Default 500; 0 is no limit. |
-| Window size | `-RESW` / `-RESH` | The window's size. The picture is scaled to fit it. Default 1600 &times; 1200. |
+| Window size | `-RESW` / `-RESH` | The window's size. Default 1600 &times; 1200. |
 
 ### Network
 
-Two players can play games that support it, over the local network or the
-internet.
-
-> **Network play is very limited for now**: two players only, and only in
-> games that were made for it. There
-> are plans to expand it in future versions.
+Two players can play games made for network play, over the local network or
+the internet.
 
 | Option | Switch | What it does |
 |---|---|---|
 | Node number | `-NODE` | Starts a two-player game. One player picks node 0, the other node 1. |
 | Player name | `-PLAYER` | Your name in a network game. |
 | Peer address | `-NETIP` | The other player's address. Leave it empty to find them on the local network. |
-| Base port | `-NETPORT` | Node 0 uses this port and node 1 the next one. Both players need the same value. Default 2300. |
+| Base port | `-NETPORT` | Both players need the same value. For internet play, open this port and the next one. Default 2300. |
 
 ### Demo
 
@@ -266,9 +260,8 @@ Records what you play to `WDLTape.REC` in the game's folder with
 
 ### Enhancements
 
-These are the options ACKNEX Reborn adds to the original engine. Options
-marked *OpenGL* only work with the OpenGL renderer on, and are greyed out
-without it.
+These options are new in ACKNEX Reborn. Options marked *OpenGL* need the
+OpenGL renderer.
 
 **Graphics**
 
@@ -287,9 +280,9 @@ without it.
 
 | Option | Switch | What it does | Default |
 |---|---|---|---|
-| Mouse look | `-ML` | Turns the view with the mouse, with separate X and Y sensitivity. Some cutscenes that turn the camera may not work. With mouse look off, the sensitivity sets the game's own mouse speed instead. | On |
+| Mouse look | `-ML` | Turns the view with the mouse, with separate X and Y sensitivity. Some cutscenes that turn the camera may not work. | On |
 | Modern WASD movement | `-MI` | The keys set on the Keys tab walk and sidestep, replacing the game's own movement. | On |
-| Trigger WASD events | `-MIEV` | The movement keys also reach the game, for cheats and keys it reads itself. Turn it off if W, A, S or D does something odd while you walk. Needs *Modern WASD movement*. | On |
+| Trigger WASD events | `-MIEV` | W, A, S and D still work for the game's own keys, such as cheats. Turn it off if one of them does something odd while you walk. | On |
 | Pin the cursor to the view's centre | `-CURLOCK` | Keeps the cursor on the crosshair, so clicks hit what you face. | Off |
 
 **Timing and physics**
@@ -297,25 +290,25 @@ without it.
 | Option | Switch | What it does | Default |
 |---|---|---|---|
 | Fixed game speed | `-DETERMINISTIC` | The game runs at a fixed rate, the same on every computer. | On |
-| Steps per second | `-SIMHZ` | 16 is the speed the games were made for. 32 or more is smoother; keep the texture fix on with it. | 32 |
-| Smooth movement between steps | `-INTERP` | Smooths movement between steps, for high refresh rate displays. Adds a tiny delay. | On |
+| Steps per second | `-SIMHZ` | Higher is smoother. | 32 |
+| Smooth movement between steps | `-INTERP` | Smoother motion on high refresh rate displays. | On |
 | Fix texture animation speed | `-FCD` | Animated textures run at their intended speed, not as fast as the frame rate. | On |
-| Fix jumps and falls | `-FVZ` | Jumps and falls behave the same at any frame rate. *Jump and fall strength* adjusts them; 400% matches the games running at 16 frames a second. | Off, 400% |
+| Fix jumps and falls | `-FVZ` | Jumps and falls behave the same at any frame rate. *Jump and fall strength* adjusts them. | Off, 400% |
 | Fix walking through walls at corners | `-FWALL` | Stops the player slipping through walls at some corners. | On |
-| Don't fall through narrow gaps | `-FEDGE` | The player only falls once fully past an edge, so gaps narrower than the player no longer swallow them. | Off |
+| Don't fall through narrow gaps | `-FEDGE` | Stops the player falling into gaps narrower than they are. | Off |
 
 **Compatibility**
 
 | Option | Switch | What it does | Default |
 |---|---|---|---|
 | CD music from .ogg files | `-OGGCD` | Plays `track2.ogg`, `track3.ogg`... from the game's folder instead of the CD. | On |
-| Play game videos | `-VIDEOS` | Plays a game's videos (`.MPG` files in its folder) where it used to run another program. Any key skips. | On |
+| Play game videos | `-VIDEOS` | Plays a game's videos from `.MPG` files in its folder. Any key skips. | On |
 | Video volume, percent | `-VVOL` | Volume of the game videos' sound. | 100 |
-| Load game patches | `-PATCH` | Uses fixed or replacement files from an `acknexpatch` folder. | On |
-| Engine default keys | `-IWDL` | Adds the engine's default keys, such as <kbd>F10</kbd> to quit. A game's own keys win. | On |
+| Load game patches | `-PATCH` | Applies ACKNEX Reborn's fixes for some games. | On |
+| Engine default keys | `-IWDL` | Adds standard keys such as <kbd>F10</kbd> to quit, unless the game uses them itself. | On |
 | Support games for engine V3.680 | `-V368` | Lets games made for the older V3.680 engine load. | On |
 | Support games for engine V3.56 | `-V356` | Lets games made for the older V3.56 engine load. | On |
-| Support games for engine V3.08 | `-V308` | Makes games made for the 1995 V3.08 engine version play correctly. Known V3.08 games turn it on by themselves; leave it off for others. | Off |
+| Support games for engine V3.08 | `-V308` | For some games from 1995. Known games turn it on by themselves; leave it off for others. | Off |
 
 Some games need particular settings to work, for example with mouse look off.
 ACKNEX Reborn recognises these games and applies those settings for you.
@@ -326,10 +319,10 @@ ACKNEX Reborn recognises these games and applies those settings for you.
 |---|---|---|
 | Open the in-game panel | The key that opens the in-game panel. | <kbd>F11</kbd> |
 | Modern WASD movement keys | Walk forward, walk backward, strafe left, strafe right. Used when *Modern WASD movement* is on. | <kbd>W</kbd> <kbd>S</kbd> <kbd>A</kbd> <kbd>D</kbd> |
-| Key rebinding (`-REBIND`) | A list of rows. In each row, pressing the key on the right also presses the key on the left. The right key keeps doing what it did before. Either side can be a mouse button. | On |
+| Key rebinding (`-REBIND`) | A list of rows, each making one key or mouse button also press another. The key you press keeps doing what it did before. | On |
 
 The **...** button next to a key lets you press the key instead of choosing it
-from the list (Windows only). The default rebinding rows give most A3 games
+from the list (Windows only). The default rebinding rows give most games
 modern controls:
 
 | Press | Also presses | Usually means |
@@ -381,16 +374,33 @@ Choose the game first: on the **Game** tab, use **Browse** to pick the game's
 <details markdown="1">
 <summary>"The script name is longer than 12 characters"</summary>
 
-The engine only accepts short file names, as in the 1990s. Use **Browse**
-rather than typing a path: it puts just the file name in the box and the
-folder in *Game folder*.
+Use **Browse** rather than typing a path: it puts just the file name in the
+box and the folder in *Game folder*.
 </details>
 
 <details markdown="1">
 <summary>Windows warns that the program is from an unknown publisher</summary>
 
-The beta builds are not signed yet. Choose **More info**, then
-**Run anyway**.
+The beta builds are not signed yet; the warning does not mean anything harmful
+was found.
+
+- Choose **More info**, then **Run anyway**.
+- Or, before unpacking, right-click the downloaded `.zip`, choose
+  **Properties**, tick **Unblock** and press **OK**. Files unpacked from it
+  will then start without the warning.
+</details>
+
+<details markdown="1">
+<summary>Windows Defender or another antivirus removes or blocks the program</summary>
+
+This is a false alarm.
+
+- Download ACKNEX Reborn only from this page or [Discord]({{ page.discord }}).
+- Restore the file from quarantine (Windows Security > Virus & threat
+  protection > Protection history) and allow it.
+- You can report the false alarm to Microsoft at
+  <https://www.microsoft.com/wdsi/filesubmission>, and let us know on Discord
+  so we can follow it up.
 </details>
 
 <details markdown="1">
@@ -416,9 +426,8 @@ The beta builds are not signed yet. Choose **More info**, then
 <details markdown="1">
 <summary>A cutscene freezes, or the camera doesn't turn when the game wants it to</summary>
 
-Some games turn the camera themselves, and mouse look takes that control
-away. Turn off *Mouse look*, and *Modern WASD movement* if the controls also
-feel wrong. Games known to need this get the right settings automatically.
+Turn off *Mouse look*, and *Modern WASD movement* if the controls also feel
+wrong.
 </details>
 
 <details markdown="1">
@@ -432,7 +441,7 @@ key, edit the rows on the **Keys** tab.
 <details markdown="1">
 <summary>A cheat or a typed word doesn't work</summary>
 
-Make sure *Trigger WASD events* is on, or turn *Modern WASD movement* off.
+Make sure *Trigger WASD events* is on (Enhancements tab), or turn *Modern WASD movement* off.
 </details>
 
 <details markdown="1">
@@ -521,18 +530,13 @@ what the console showed.
 
 ## Game videos
 
-Some games played their videos with a separate program that ACKNEX Reborn does
-not run. With **Play game videos** on, ACKNEX Reborn plays them itself, from
-MPEG-1 video files (`.MPG`) in the game's folder, beside its `.WRS` or `.WDL`
-files. Any key, mouse button or joystick button skips a video. If a video is
-missing, a message says so and the game carries on.
+Some games' videos have to be converted to `.MPG` files before ACKNEX Reborn
+can play them. Put the files in the game's folder. Any key skips a video.
 
-| Game | File | When |
-|---|---|---|
-| Incidente em Varginha, Alien Anarchy | `INTRO01.MPG` | Before the game starts |
-| | `INTRO02.MPG` | After the first level |
-| | `END01.MPG` | After the last level |
-| Saints of Virtue, Saints of Virtue X | `INTRO.MPG` | At startup (optional: no message if it is missing) |
+| Game | Files |
+|---|---|
+| Incidente em Varginha, Alien Anarchy | `INTRO01.MPG`, `INTRO02.MPG`, `END01.MPG` |
+| Saints of Virtue, Saints of Virtue X | `INTRO.MPG` |
 
 ### Making the files
 
