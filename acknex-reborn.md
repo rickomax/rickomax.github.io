@@ -7,9 +7,9 @@ extra_css: /assets/css/acknex-reborn.css
 description: Play classic 3D GameStudio A3 games on modern Windows and Linux.
 
 # ---- Edit these -----------------------------------------------------------
-version: "Beta 0.2"
-download_win64: "https://ricardoreis.net/acknexreborn/ACKNEXReborn-0.2-windows-x64.zip"
-download_linux64: "https://ricardoreis.net/acknexreborn/ACKNEXReborn-0.2-linux-x86_64.tar.gz"
+version: "Beta 0.3"
+download_win64: "https://ricardoreis.net/acknexreborn/ACKNEXReborn-0.3-windows-x64.zip"
+download_linux64: "https://ricardoreis.net/acknexreborn/ACKNEXReborn-0.3-linux-x86_64.tar.gz"
 discord: "https://discord.gg/Fdz6kjX8Jk"
 
 # Compatible games. `download` is optional; leave it out when there is no
@@ -19,6 +19,7 @@ games:
   - name: "3D Hunting: Shark"
   - name: "3D Hunting: Trophy Game"
   - name: "3D Hunting Trophy: Whitetail"
+  - name: "Alien Anarchy"
   - name: "Angst: Rahz' Revenge"
   - name: "Black Bekker"
     download: "https://minbekker.itch.io/blackbekker"
@@ -70,15 +71,13 @@ screenshots:
   <details class="ar-new">
     <summary>Update {{ page.version | remove: "Beta " }} available: what's new</summary>
     <ul>
-      <li><strong>ANGST:</strong> the English release now loads.</li>
-      <li><strong>ANGST:</strong> crabs no longer sink into the floor.</li>
-      <li><strong>ANGST:</strong> walking backward no longer stops the CD music.</li>
-      <li><strong>ANGST:</strong> the English intro clip now plays.</li>
-      <li><strong>ANGST:</strong> left and right strafing now run at the same speed.</li>
-      <li><strong>ANGST:</strong> the harpoon no longer explodes as soon as it's fired.</li>
-      <li><strong>OpenGL:</strong> see-through surfaces are no longer drawn solid.</li>
-      <li><strong>OpenGL:</strong> less flickering on wall decals.</li>
-      <li><strong>OpenGL:</strong> held weapons are now drawn.</li>
+      <li><strong>Game videos:</strong> Incidente em Varginha, Alien Anarchy and Saints of Virtue can play their videos again, from <code>.MPG</code> files, with their own volume setting (see <a href="#game-videos">Game videos</a>).</li>
+      <li><strong>Game options:</strong> some games ask about their own options before starting, such as the language, left-handed mouse buttons or skipping the intro.</li>
+      <li><strong>Alien Anarchy:</strong> starts in English, and goes on after the first level instead of quitting.</li>
+      <li><strong>Hades 2:</strong> starts with the game's own WASD and mouse controls.</li>
+      <li><strong>Mouse:</strong> the sensitivity also sets a game's own mouse speed when mouse look is off.</li>
+      <li><strong>New option:</strong> "Don't fall through narrow gaps".</li>
+      <li><strong>Starting:</strong> starting the program in a game's folder uses the launcher's default settings, and a game can be started by naming its folder.</li>
     </ul>
   </details>
 </div>
@@ -177,7 +176,9 @@ game.
 
 For most of the [compatible games](#compatible-games) there is a quicker way:
 extract the package into the game's own folder and run `acknexreborn` there.
-The game starts straight away.
+The game starts straight away. A few games first ask about their own options,
+such as the language or skipping the intro; your choices are ticked again next
+time.
 
 While playing:
 
@@ -286,7 +287,7 @@ without it.
 
 | Option | Switch | What it does | Default |
 |---|---|---|---|
-| Mouse look | `-ML` | Turns the view with the mouse, with separate X and Y sensitivity. Some cutscenes that turn the camera may not work. | On |
+| Mouse look | `-ML` | Turns the view with the mouse, with separate X and Y sensitivity. Some cutscenes that turn the camera may not work. With mouse look off, the sensitivity sets the game's own mouse speed instead. | On |
 | Modern WASD movement | `-MI` | The keys set on the Keys tab walk and sidestep, replacing the game's own movement. | On |
 | Trigger WASD events | `-MIEV` | The movement keys also reach the game, for cheats and keys it reads itself. Turn it off if W, A, S or D does something odd while you walk. Needs *Modern WASD movement*. | On |
 | Pin the cursor to the view's centre | `-CURLOCK` | Keeps the cursor on the crosshair, so clicks hit what you face. | Off |
@@ -301,12 +302,15 @@ without it.
 | Fix texture animation speed | `-FCD` | Animated textures run at their intended speed, not as fast as the frame rate. | On |
 | Fix jumps and falls | `-FVZ` | Jumps and falls behave the same at any frame rate. *Jump and fall strength* adjusts them; 400% matches the games running at 16 frames a second. | Off, 400% |
 | Fix walking through walls at corners | `-FWALL` | Stops the player slipping through walls at some corners. | On |
+| Don't fall through narrow gaps | `-FEDGE` | The player only falls once fully past an edge, so gaps narrower than the player no longer swallow them. | Off |
 
 **Compatibility**
 
 | Option | Switch | What it does | Default |
 |---|---|---|---|
 | CD music from .ogg files | `-OGGCD` | Plays `track2.ogg`, `track3.ogg`... from the game's folder instead of the CD. | On |
+| Play game videos | `-VIDEOS` | Plays a game's videos (`.MPG` files in its folder) where it used to run another program. Any key skips. | On |
+| Video volume, percent | `-VVOL` | Volume of the game videos' sound. | 100 |
 | Load game patches | `-PATCH` | Uses fixed or replacement files from an `acknexpatch` folder. | On |
 | Engine default keys | `-IWDL` | Adds the engine's default keys, such as <kbd>F10</kbd> to quit. A game's own keys win. | On |
 | Support games for engine V3.680 | `-V368` | Lets games made for the older V3.680 engine load. | On |
@@ -515,6 +519,57 @@ what the console showed.
 
 </div>
 
+## Game videos
+
+Some games played their videos with a separate program that ACKNEX Reborn does
+not run. With **Play game videos** on, ACKNEX Reborn plays them itself, from
+MPEG-1 video files (`.MPG`) in the game's folder, beside its `.WRS` or `.WDL`
+files. Any key, mouse button or joystick button skips a video. If a video is
+missing, a message says so and the game carries on.
+
+| Game | File | When |
+|---|---|---|
+| Incidente em Varginha, Alien Anarchy | `INTRO01.MPG` | Before the game starts |
+| | `INTRO02.MPG` | After the first level |
+| | `END01.MPG` | After the last level |
+| Saints of Virtue, Saints of Virtue X | `INTRO.MPG` | At startup (optional: no message if it is missing) |
+
+### Making the files
+
+The videos must come from your own, legally obtained copy of the game. They are
+usually in the game's original installation or distribution files: Smacker
+(`.SMK`) files, video EXEs, or other containers.
+
+With [FFmpeg](https://ffmpeg.org), convert each video like this, keeping its
+name:
+
+```
+ffmpeg -i INTRO01.SMK -c:v mpeg1video -q:v 5 -c:a mp2 -b:a 128k -ar 44100 -f mpeg INTRO01.MPG
+```
+
+Or upload the files to an AI assistant that can process files, and ask it to:
+
+- Look for standalone Smacker (`.SMK`) files, but also inspect EXEs and other
+  files for embedded videos.
+- Not assume a format: games may use Smacker, Bink, AVI, MPEG or other old
+  formats.
+- Check the actual video stream before extracting it, since EXEs may contain
+  false signatures or several matches.
+- Extract the complete video and convert it to MPEG-1 video (`mpeg1video`) in
+  an `.mpg` file, with MP2 audio.
+- Keep the original resolution and aspect ratio.
+- Resample the audio or change the frame rate only when MPEG-1 needs it.
+- Check with FFprobe that the final video codec really is `mpeg1video`.
+- Keep the original name where possible: `INTRO01.SMK` or `INTRO01.EXE` becomes
+  `INTRO01.mpg`.
+- Put all the converted files in a ZIP if there are several.
+
+Then put the `.mpg` files in the game's main folder.
+
+These files are for your personal use. ACKNEX Reborn does not distribute them,
+and ACKNEX Reborn, its developers and contributors are not responsible for
+unauthorised or illegal redistribution of copyrighted game files.
+
 ## About
 
 <div class="ar-about" markdown="1">
@@ -540,6 +595,7 @@ Third-party software:
 - TiMidity - Artistic License
 - stb_vorbis - MIT License
 - TinySoundFont - MIT License
+- PL_MPEG - MIT License
 - Dear ImGui - MIT License
 - libui-ng - MIT License
 - FluidR3_GM SoundFont, by Frank Wen and Toby Smithe - MIT License
