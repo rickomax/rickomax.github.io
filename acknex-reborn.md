@@ -68,6 +68,8 @@ screenshots:
     Questions and bug reports: <a href="{{ page.discord }}">Discord</a>.
   </p>
 
+  {% include kofi-banner.html %}
+
   <details class="ar-new">
     <summary>Update {{ page.version | remove: "Beta " }} available: what's new</summary>
     <ul>

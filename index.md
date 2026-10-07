@@ -7,6 +7,8 @@ permalink: /
 
 Here you can find a few projects I've been working on
 
+{% include kofi-banner.html %}
+
 ### [ACKNEX Reborn](/acknex-reborn/)
 Play classic 3D GameStudio A3 games on modern Windows and Linux
 
