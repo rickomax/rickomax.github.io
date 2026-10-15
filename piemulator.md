@@ -34,10 +34,6 @@ games:
     year: 1995
   - name: "3D Xmas Adventure: Santa's Rescue"
     year: 1996
-  - name: "GCS Demo Game"
-    year: 1995
-  - name: "GCS Sampler: Action"
-  - name: "GCS Sampler: Christmas"
   - name: "Industrial Killers"
     year: 1995
   - name: "Lethal Tender"
