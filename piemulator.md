@@ -107,6 +107,21 @@ games:
   </p>
 
   {% include kofi-banner.html %}
+
+  <details class="ar-new">
+    <summary>Update {{ page.version | remove: "Beta " }} available: what's new</summary>
+    <ul>
+      <li><strong>Linux:</strong> PIEMulator now runs on Linux too, as well as Windows.</li>
+      <li><strong>Original pace:</strong> the games run at the speed of the PCs they were made for. Before, much of each game ran too fast: the machine gun, grenades (which could go off at your feet), animations, and enemies and your own moves.</li>
+      <li><strong>Still smooth:</strong> the view keeps your display's refresh rate, so turning, walking and jumping stay smooth between the game's frames.</li>
+      <li><strong>New Engine slider</strong> in the game list, to choose the game's frame rate, from 10 to 70 frames a second (see <a href="#the-game-list">The game list</a>).</li>
+      <li><strong>Mouse look:</strong> walls and floor turn together, and objects keep facing you while you turn.</li>
+      <li><strong>OpenGL view:</strong> the floor no longer shifts slightly against the walls as you walk.</li>
+      <li><strong>Minimal HUD:</strong> the item boxes sit beside the weapon at the bottom left, and the row of objects to drop shows on top of them.</li>
+      <li><strong>Fixed:</strong> after <kbd>Alt</kbd>+<kbd>Tab</kbd> or <kbd>Alt</kbd>+<kbd>F4</kbd>, <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> and <kbd>E</kbd> could stop working in the next game.</li>
+      <li><strong>Game list:</strong> a tidier layout; the start options are now called <em>Maximized</em> and <em>Fullscreen</em>, with the sliders beside them.</li>
+    </ul>
+  </details>
 </div>
 
 PIEMulator runs the DOS games of Pie in the Sky Software's POWER engine
@@ -484,45 +499,6 @@ select the game and press <kbd>Tab</kbd>.
 - No network, modem or serial play.
 - No joystick: it reads as absent, as on a PC without one.
 - PIEMulator is a beta. Not every game has been played through to the end.
-
-## Changelog
-
-<div class="ar-faq" markdown="1">
-
-<details open markdown="1">
-<summary>Beta 0.2</summary>
-
-- **Linux build.** PIEMulator now runs on Linux too, as well as Windows.
-- **Games play at their original pace.** The games now run at the speed of
-  the PCs they were made for. Before, much of each game ran too fast: the
-  machine gun, grenades (which could go off at your feet), animations, and
-  enemies and your own moves (about 15% too fast).
-- **Still smooth.** The view keeps your display's refresh rate: turning,
-  walking and jumping stay smooth between the game's frames.
-- **New Engine slider** in the game list, to choose the game's frame rate,
-  from 10 to 70 frames a second.
-- **Mouse look:** walls and floor now turn together, and objects keep facing
-  you while you turn.
-- **OpenGL view:** the floor no longer shifts slightly against the walls as
-  you walk.
-- **Minimal HUD:** the item boxes now sit beside the weapon at the bottom
-  left, and the row of objects to drop shows on top of them.
-- **Fixed:** after <kbd>Alt</kbd>+<kbd>Tab</kbd> or <kbd>Alt</kbd>+<kbd>F4</kbd>,
-  <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> and <kbd>E</kbd> could
-  stop working in the next game.
-- **Game list:** a tidier layout. The start options are now called
-  *Maximized* and *Fullscreen*, with the sliders beside them.
-
-</details>
-
-<details markdown="1">
-<summary>Beta 0.1</summary>
-
-- The first public beta, for Windows.
-
-</details>
-
-</div>
 
 ## Games are not included
 
