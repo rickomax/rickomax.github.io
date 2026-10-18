@@ -8,10 +8,10 @@ description: Play the games of Pie in the Sky's 3D Game Creation System, POWER 3
 
 
 # ---- Edit these -----------------------------------------------------------
-version: "Beta 0.1"
+version: "Beta 0.2"
 # Leave a download empty to show "Coming later".
-download_win64: "https://ricardoreis.net/piemulator/PIEMulator-0.1-windows-x64.zip"
-download_linux64: ""
+download_win64: "https://ricardoreis.net/piemulator/PIEMulator-0.2-windows-x64.zip"
+download_linux64: "https://ricardoreis.net/piemulator/PIEMulator-0.2-linux-x64.zip"
 discord: "https://discord.gg/kKvzfqFTJ"
 
 # Screenshots: put the images in /assets/img/ and fill in `src`.
@@ -142,7 +142,7 @@ look and modern controls.
   </div>
   <div class="ar-card">
     <h4>Fast and smooth</h4>
-    <p>Each game runs as native code, made on your computer as it loads, in step with your display.</p>
+    <p>Each game runs as native code, made on your computer as it loads. Games keep their original pace, while the view stays smooth at your display's refresh rate.</p>
   </div>
   <div class="ar-card">
     <h4>A real 3D view</h4>
@@ -271,8 +271,9 @@ player should know about it, and the keys below. Under them:
 | Controls | The key bindings, for this game or for every game (see [Controls](#controls)). |
 | Save | Saves the folders and the settings. **Play** saves them too. |
 | Play | Starts the game. |
-| Start maximized | Every game's window opens maximized. |
-| Start in fullscreen | Every game opens in fullscreen. |
+| Maximized | Every game's window opens maximized. |
+| Fullscreen | Every game opens in fullscreen. |
+| Engine | How many frames a second the game itself runs in 3D play, from 10 to 70. The default, 17.5, is the speed of the PCs the games were made for, and keeps weapons, grenades and animations at their original pace. The view stays smooth whatever you choose. |
 | Mouse | Mouse sensitivity, from 0.25&times; to 2.5&times;. |
 | Volume | The volume of sound and music. |
 
@@ -358,6 +359,7 @@ by hand:
 ```
 start_maximized=1        # every game's window opens maximized
 start_fullscreen=1       # every game opens in fullscreen
+engine_fps=17.5          # the game's frame rate: 10, 11.7, 14, 17.5, 23.3, 35 or 70
 mouse_sensitivity=1.5    # 0.25 to 2.5
 volume=80                # 0 to 100
 show_adult=1             # list games with adult content
@@ -367,8 +369,9 @@ bind.all.wheeldown=3
 bind.all.menu.q=esc      # in the menus, Q backs out
 ```
 
-What PIEMulator knows of each game (its name, folder, default bindings) is
-in `games.ini`, next to `piemulator`. A `games.ini` in your user settings folder is
+What PIEMulator knows of each game (its name, folder, default bindings, and
+for a few games a frame rate of their own, used instead of the Engine slider)
+is in `games.ini`, next to `piemulator`. A `games.ini` in your user settings folder is
 read after it, to add games or change them, without touching the installed
 one.
 
@@ -390,6 +393,8 @@ one.
 | `GCS_MODERN=0` | Starts with the modern controls off. |
 | `GCS_MOUSE_INVERT=1` | Inverts looking up and down. |
 | `GCS_VSYNC=0` | Doesn't wait for the display's refresh. |
+| `GCS_ENGINE_FPS=17.5` | The game's frame rate in 3D play, over the Engine slider and `games.ini`. |
+| `GCS_GAMETIME=0` | Leaves the game's speed as the original engine works it out, which runs a little fast on modern PCs. |
 
 </details>
 
@@ -423,6 +428,16 @@ The beta builds are not signed yet; the warning does not mean anything
 harmful was found. Choose **More info**, then **Run anyway**. Or, before
 unpacking, right-click the downloaded `.zip`, choose **Properties**, tick
 **Unblock** and press **OK**.
+</details>
+
+<details markdown="1">
+<summary>Enemies and animations move less smoothly than the view</summary>
+
+That is the original pace: the game itself runs at 17.5 frames a second,
+as on the PCs it was made for, while PIEMulator keeps the view smooth
+between its frames. To make them smoother, raise **Engine** in the game
+list; above the default, the machine gun, grenades and animations run
+faster than they should.
 </details>
 
 <details markdown="1">
@@ -469,6 +484,45 @@ select the game and press <kbd>Tab</kbd>.
 - No network, modem or serial play.
 - No joystick: it reads as absent, as on a PC without one.
 - PIEMulator is a beta. Not every game has been played through to the end.
+
+## Changelog
+
+<div class="ar-faq" markdown="1">
+
+<details open markdown="1">
+<summary>Beta 0.2</summary>
+
+- **Linux build.** PIEMulator now runs on Linux too, as well as Windows.
+- **Games play at their original pace.** The games now run at the speed of
+  the PCs they were made for. Before, much of each game ran too fast: the
+  machine gun, grenades (which could go off at your feet), animations, and
+  enemies and your own moves (about 15% too fast).
+- **Still smooth.** The view keeps your display's refresh rate: turning,
+  walking and jumping stay smooth between the game's frames.
+- **New Engine slider** in the game list, to choose the game's frame rate,
+  from 10 to 70 frames a second.
+- **Mouse look:** walls and floor now turn together, and objects keep facing
+  you while you turn.
+- **OpenGL view:** the floor no longer shifts slightly against the walls as
+  you walk.
+- **Minimal HUD:** the item boxes now sit beside the weapon at the bottom
+  left, and the row of objects to drop shows on top of them.
+- **Fixed:** after <kbd>Alt</kbd>+<kbd>Tab</kbd> or <kbd>Alt</kbd>+<kbd>F4</kbd>,
+  <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> and <kbd>E</kbd> could
+  stop working in the next game.
+- **Game list:** a tidier layout. The start options are now called
+  *Maximized* and *Fullscreen*, with the sliders beside them.
+
+</details>
+
+<details markdown="1">
+<summary>Beta 0.1</summary>
+
+- The first public beta, for Windows.
+
+</details>
+
+</div>
 
 ## Games are not included
 
