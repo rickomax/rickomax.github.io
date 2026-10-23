@@ -279,6 +279,7 @@ OpenGL renderer.
 | Smooth distant textures | `-MIPMAPS` | *OpenGL.* Smooths distant textures and stops shimmering. Uses more memory. | On |
 | Smooth fog | `-SMOOTHFOG` | *OpenGL.* Distant surfaces fade into darkness smoothly instead of in bands. | On |
 | 2D layer in OpenGL | `-GL2D` | *OpenGL.* Draws panels, text and the mouse pointer with OpenGL as well. | On |
+| Modded graphics | `-MODS` | *OpenGL.* Uses replacement images from the game's `mod` folder: a PNG named after the original image file (`WALL.png` for `WALL.PCX`), at any size. Its transparency is used. Panels and text also need the 2D layer option. A PNG in a subfolder named after a `.WRS` file (`mod/INTRO/` for `INTRO.WRS`) is used only for that file's images. A model's skin is replaced by `MODEL_skin0.png` (skin 0 of `MODEL.MDL`), `MODEL_skin1.png` and so on. | On |
 | Show FPS | `-FPS` | Shows the frame rate in the corner of the view. | Off |
 
 **Input**
