@@ -224,6 +224,8 @@ launcher for a short description.
 |---|---|---|
 | No sound | `-OS` | Turns off sound effects. |
 | No music | `-OM` | Turns off MIDI music. |
+| Windows MIDI | `-WINMIDI` | Plays MIDI music through Windows' own synthesizer instead of the built-in one. Windows only. |
+| SoundFont | `-SOUNDFONT` | A .sf2 file to play MIDI music with. Empty uses FluidR3_GM.sf2. Not used with Windows MIDI. |
 | No CD audio | `-OCD` | Turns off CD audio. |
 | No audio at all | `-OT` | Turns off all sound and music at once. |
 | No joystick | `-NJ` | Ignores any joystick. |
@@ -276,6 +278,7 @@ OpenGL renderer.
 | Ambient occlusion | `-SSAO` | *OpenGL.* Darkens corners and creases for extra depth. Costs GPU time. Radius and Strength set how far and how dark. | Off |
 | Smooth distant textures | `-MIPMAPS` | *OpenGL.* Smooths distant textures and stops shimmering. Uses more memory. | On |
 | Smooth fog | `-SMOOTHFOG` | *OpenGL.* Distant surfaces fade into darkness smoothly instead of in bands. | On |
+| 2D layer in OpenGL | `-GL2D` | *OpenGL.* Draws panels, text and the mouse pointer with OpenGL as well. | On |
 | Show FPS | `-FPS` | Shows the frame rate in the corner of the view. | Off |
 
 **Input**
