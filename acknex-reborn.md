@@ -537,22 +537,10 @@ what the console showed.
 
 ## Game videos
 
-Some games' videos have to be converted to `.MPG` files before ACKNEX Reborn
-can play them. Put the files in the game's folder. Any key skips a video.
-
-| Game | Files |
-|---|---|
-| Incidente em Varginha, Alien Anarchy | `INTRO01.MPG`, `INTRO02.MPG`, `END01.MPG` |
-| Saints of Virtue, Saints of Virtue X | `INTRO.MPG`, `INSTALL.MPG` (the ending) |
-
-### Making the files
-
-Use the ACKNEX Reborn video converter, in the releases area of our
-[Discord]({{ page.discord }}). Choose the game's original files or its CD
-image, and it finds the videos above and converts them. It can download FFmpeg
-for you.
-
-The videos must come from your own, legally obtained copy of the game.
+Incidente em Varginha, Alien Anarchy, Saints of Virtue and Saints of Virtue X
+can play their original videos. The ACKNEX Reborn video converter makes them
+from your own copy of the game: get it in the releases area of our
+[Discord]({{ page.discord }}), and ask there if you get stuck.
 
 These files are for your personal use. ACKNEX Reborn does not distribute them,
 and ACKNEX Reborn, its developers and contributors are not responsible for
@@ -561,57 +549,10 @@ unauthorised or illegal redistribution of copyrighted game files.
 ## Modded graphics
 
 With the OpenGL renderer, a game's images can be replaced by PNG files at any
-resolution. Put them in a folder named `mod` in the game's folder.
-
-**A PNG replaces a whole image file and is named after it.** `mod/STONE.png`
-replaces `STONE.PCX` (or `STONE.LBM`, `STONE.BBM`) wherever the game shows it:
-walls, floors, sprites, the sky, panels, fonts and the mouse pointer. Upper or
-lower case does not matter.
-
-**Draw it at a multiple of the original size.** For a 64 x 64 `STONE.PCX`, a
-256 x 256 `STONE.png` is four times as detailed. Keep the same shape: a PNG of
-another shape is stretched to fit.
-
-**One file often holds many pictures**, and the PNG keeps them all in the same
-places. Black Bekker cuts sixteen 40 x 40 frames out of its 160 x 160
-`KK_G005.pcx`; a 640 x 640 `KK_G005.png` with each frame where it was, four
-times larger, replaces all sixteen.
-
-**Transparency** comes from the PNG's alpha channel, so edges can be soft
-instead of the original's hard cut-outs.
-
-**The same name in two archives.** A PNG in a subfolder named after a `.WRS`
-file is used only for that archive's images. Incidente em Varginha has a
-different `FCT01.PCX` in `INTRO.WRS` and in `GAME.WRS`, so one replacement goes
-in `mod/INTRO/FCT01.png` and the other in `mod/GAME/FCT01.png` (or in
-`mod/FCT01.png`, which serves every archive).
-
-**Model skins** are named after the model and the skin's number: skin 0 of
-`CHAIR.MDL` is `mod/CHAIR_skin0.png`, skin 1 is `mod/CHAIR_skin1.png`.
-
-Example layout:
-
-```
-the game's folder/
-  GAME.WRS
-  INTRO.WRS
-  mod/
-    STONE.png            replaces STONE.PCX, from any archive
-    CHAIR_skin0.png      replaces skin 0 of CHAIR.MDL
-    INTRO/
-      FCT01.png          replaces FCT01.PCX from INTRO.WRS only
-```
-
-Good to know:
-
-- Shimmering water or lava stops shimmering when it is replaced.
-- Not replaced: animated model skins, FLIC animations and videos.
-- To check that a PNG is used, turn on *Show the console*: it lists each one
-  with the image it replaces, and says when one is stretched.
-- A game's images are usually packed in its `.WRS` files. Get them out with
-  the WRS extractor, in the *acknex-3-info* channel of our
-  [Discord]({{ page.discord }}), then convert the ones you want to change to
-  PNG with any image editor.
+resolution, from a `mod` folder in the game's folder. How to make them, with
+examples, the WRS extractor to get the original images out, and other
+players' mods: the *#modded-graphics* channel of our
+[Discord]({{ page.discord }}).
 
 ## About
 
