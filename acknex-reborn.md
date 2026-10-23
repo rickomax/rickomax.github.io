@@ -7,9 +7,9 @@ extra_css: /assets/css/acknex-reborn.css
 description: Play classic 3D GameStudio A3 games on modern Windows and Linux.
 
 # ---- Edit these -----------------------------------------------------------
-version: "Beta 0.3"
-download_win64: "https://ricardoreis.net/acknexreborn/ACKNEXReborn-0.3-windows-x64.zip"
-download_linux64: "https://ricardoreis.net/acknexreborn/ACKNEXReborn-0.3-linux-x86_64.tar.gz"
+version: "Beta 0.4"
+download_win64: "https://ricardoreis.net/acknexreborn/ACKNEXReborn-0.4-windows-x64.zip"
+download_linux64: "https://ricardoreis.net/acknexreborn/ACKNEXReborn-0.4-linux-x86_64.tar.gz"
 discord: "https://discord.gg/Fdz6kjX8Jk"
 
 # Compatible games. `download` is optional; leave it out when there is no
@@ -73,13 +73,14 @@ screenshots:
   <details class="ar-new">
     <summary>Update {{ page.version | remove: "Beta " }} available: what's new</summary>
     <ul>
-      <li><strong>Game videos:</strong> Incidente em Varginha, Alien Anarchy and Saints of Virtue can play their videos from <code>.MPG</code> files, with their own volume setting (see <a href="#game-videos">Game videos</a>).</li>
-      <li><strong>Game options:</strong> some games ask about their own options before starting, such as the language, left-handed mouse buttons or skipping the intro.</li>
-      <li><strong>Alien Anarchy:</strong> starts in English and plays past the first level.</li>
-      <li><strong>Hades 2:</strong> starts with the game's own WASD and mouse controls.</li>
-      <li><strong>Mouse:</strong> the sensitivity also sets a game's own mouse speed when mouse look is off.</li>
-      <li><strong>New option:</strong> "Don't fall through narrow gaps".</li>
-      <li><strong>Starting:</strong> a game can be started by naming its folder (see <a href="#getting-started">Getting started</a>).</li>
+      <li><strong>Modded graphics:</strong> put PNG images in a game's <code>mod</code> folder to replace its textures, sprites, sky, panels, fonts and model skins, at any resolution (see <a href="#modded-graphics">Modded graphics</a>).</li>
+      <li><strong>OpenGL:</strong> panels, text and the mouse pointer are drawn with OpenGL too.</li>
+      <li><strong>Windows MIDI:</strong> on Windows, MIDI music now plays through Windows' own synthesizer by default, so it sounds the way the games sounded when they came out. The built-in synthesizer is still there: turn off <em>Windows MIDI</em> on the Devices tab.</li>
+      <li><strong>SoundFont:</strong> MIDI music can use a SoundFont (<code>.sf2</code>) of your choice.</li>
+      <li><strong>Saints of Virtue:</strong> plays its ending video from <code>INSTALL.MPG</code>, made from the CD's <code>INSTALL.DAT</code> (see <a href="#game-videos">Game videos</a>).</li>
+      <li><strong>Video converter:</strong> makes the game videos' <code>.MPG</code> files, in the releases area of our <a href="{{ page.discord }}">Discord</a> (see <a href="#game-videos">Game videos</a>).</li>
+      <li><strong>Black Bekker:</strong> the "no signal" screen covers the mini map in OpenGL.</li>
+      <li><strong>OpenGL:</strong> signs and other wall decals no longer flicker or break up at a distance.</li>
     </ul>
   </details>
 </div>
@@ -224,7 +225,7 @@ launcher for a short description.
 |---|---|---|
 | No sound | `-OS` | Turns off sound effects. |
 | No music | `-OM` | Turns off MIDI music. |
-| Windows MIDI | `-WINMIDI` | Plays MIDI music through Windows' own synthesizer instead of the built-in one. Windows only. |
+| Windows MIDI | `-WINMIDI` | Plays MIDI music through Windows' own synthesizer instead of the built-in one. Windows only. **On** by default. |
 | SoundFont | `-SOUNDFONT` | A .sf2 file to play MIDI music with. Empty uses FluidR3_GM.sf2. Not used with Windows MIDI. |
 | No CD audio | `-OCD` | Turns off CD audio. |
 | No audio at all | `-OT` | Turns off all sound and music at once. |
@@ -279,7 +280,7 @@ OpenGL renderer.
 | Smooth distant textures | `-MIPMAPS` | *OpenGL.* Smooths distant textures and stops shimmering. Uses more memory. | On |
 | Smooth fog | `-SMOOTHFOG` | *OpenGL.* Distant surfaces fade into darkness smoothly instead of in bands. | On |
 | 2D layer in OpenGL | `-GL2D` | *OpenGL.* Draws panels, text and the mouse pointer with OpenGL as well. | On |
-| Modded graphics | `-MODS` | *OpenGL.* Uses replacement images from the game's `mod` folder: a PNG named after the original image file (`WALL.png` for `WALL.PCX`), at any size. Its transparency is used. Panels and text also need the 2D layer option. A PNG in a subfolder named after a `.WRS` file (`mod/INTRO/` for `INTRO.WRS`) is used only for that file's images. A model's skin is replaced by `MODEL_skin0.png` (skin 0 of `MODEL.MDL`), `MODEL_skin1.png` and so on. | On |
+| Modded graphics | `-MODS` | *OpenGL.* Uses replacement PNG images from the game's `mod` folder (see [Modded graphics](#modded-graphics)). | On |
 | Show FPS | `-FPS` | Shows the frame rate in the corner of the view. | Off |
 
 **Input**
@@ -542,43 +543,75 @@ can play them. Put the files in the game's folder. Any key skips a video.
 | Game | Files |
 |---|---|
 | Incidente em Varginha, Alien Anarchy | `INTRO01.MPG`, `INTRO02.MPG`, `END01.MPG` |
-| Saints of Virtue, Saints of Virtue X | `INTRO.MPG` |
+| Saints of Virtue, Saints of Virtue X | `INTRO.MPG`, `INSTALL.MPG` (the ending) |
 
 ### Making the files
 
-The videos must come from your own, legally obtained copy of the game. They are
-usually in the game's original installation or distribution files: Smacker
-(`.SMK`) files, video EXEs, or other containers.
+Use the ACKNEX Reborn video converter, in the releases area of our
+[Discord]({{ page.discord }}). Choose the game's original files or its CD
+image, and it finds the videos above and converts them. It can download FFmpeg
+for you.
 
-With [FFmpeg](https://ffmpeg.org), convert each video like this, keeping its
-name:
-
-```
-ffmpeg -i INTRO01.SMK -c:v mpeg1video -q:v 5 -c:a mp2 -b:a 128k -ar 44100 -f mpeg INTRO01.MPG
-```
-
-Or upload the files to an AI assistant that can process files, and ask it to:
-
-- Look for standalone Smacker (`.SMK`) files, but also inspect EXEs and other
-  files for embedded videos.
-- Not assume a format: games may use Smacker, Bink, AVI, MPEG or other old
-  formats.
-- Check the actual video stream before extracting it, since EXEs may contain
-  false signatures or several matches.
-- Extract the complete video and convert it to MPEG-1 video (`mpeg1video`) in
-  an `.mpg` file, with MP2 audio.
-- Keep the original resolution and aspect ratio.
-- Resample the audio or change the frame rate only when MPEG-1 needs it.
-- Check with FFprobe that the final video codec really is `mpeg1video`.
-- Keep the original name where possible: `INTRO01.SMK` or `INTRO01.EXE` becomes
-  `INTRO01.mpg`.
-- Put all the converted files in a ZIP if there are several.
-
-Then put the `.mpg` files in the game's main folder.
+The videos must come from your own, legally obtained copy of the game.
 
 These files are for your personal use. ACKNEX Reborn does not distribute them,
 and ACKNEX Reborn, its developers and contributors are not responsible for
 unauthorised or illegal redistribution of copyrighted game files.
+
+## Modded graphics
+
+With the OpenGL renderer, a game's images can be replaced by PNG files at any
+resolution. Put them in a folder named `mod` in the game's folder.
+
+**A PNG replaces a whole image file and is named after it.** `mod/STONE.png`
+replaces `STONE.PCX` (or `STONE.LBM`, `STONE.BBM`) wherever the game shows it:
+walls, floors, sprites, the sky, panels, fonts and the mouse pointer. Upper or
+lower case does not matter.
+
+**Draw it at a multiple of the original size.** For a 64 x 64 `STONE.PCX`, a
+256 x 256 `STONE.png` is four times as detailed. Keep the same shape: a PNG of
+another shape is stretched to fit.
+
+**One file often holds many pictures**, and the PNG keeps them all in the same
+places. Black Bekker cuts sixteen 40 x 40 frames out of its 160 x 160
+`KK_G005.pcx`; a 640 x 640 `KK_G005.png` with each frame where it was, four
+times larger, replaces all sixteen.
+
+**Transparency** comes from the PNG's alpha channel, so edges can be soft
+instead of the original's hard cut-outs.
+
+**The same name in two archives.** A PNG in a subfolder named after a `.WRS`
+file is used only for that archive's images. Incidente em Varginha has a
+different `FCT01.PCX` in `INTRO.WRS` and in `GAME.WRS`, so one replacement goes
+in `mod/INTRO/FCT01.png` and the other in `mod/GAME/FCT01.png` (or in
+`mod/FCT01.png`, which serves every archive).
+
+**Model skins** are named after the model and the skin's number: skin 0 of
+`CHAIR.MDL` is `mod/CHAIR_skin0.png`, skin 1 is `mod/CHAIR_skin1.png`.
+
+Example layout:
+
+```
+the game's folder/
+  GAME.WRS
+  INTRO.WRS
+  mod/
+    STONE.png            replaces STONE.PCX, from any archive
+    CHAIR_skin0.png      replaces skin 0 of CHAIR.MDL
+    INTRO/
+      FCT01.png          replaces FCT01.PCX from INTRO.WRS only
+```
+
+Good to know:
+
+- Shimmering water or lava stops shimmering when it is replaced.
+- Not replaced: animated model skins, FLIC animations and videos.
+- To check that a PNG is used, turn on *Show the console*: it lists each one
+  with the image it replaces, and says when one is stretched.
+- A game's images are usually packed in its `.WRS` files. Get them out with
+  the WRS extractor, in the *acknex-3-info* channel of our
+  [Discord]({{ page.discord }}), then convert the ones you want to change to
+  PNG with any image editor.
 
 ## About
 
